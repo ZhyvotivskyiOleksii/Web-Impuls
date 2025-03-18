@@ -1,0 +1,419 @@
+/* ============ Секции About, Why-us и т.д. ============ */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #079bfe;
+    background-image: url(/images/o-nas/Illustration.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: auto; 
+}
+
+.about-title {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem; 
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    margin-bottom: 1.5625rem;
+    white-space: nowrap;
+    font-family: "FuturaPT2", sans-serif;
+    padding-top: 120px;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about-wrap {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.image {
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-family: "FuturaPT2", sans-serif;
+    letter-spacing: 0.06em;
+}
+
+.content p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+}
+
+.about-span {
+    letter-spacing: 0.06em;
+    font-family: "FuturaPT2", sans-serif;
+}
+
+.why-us {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.why-us h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 80px;
+    text-align: left;
+    font-family: "FuturaPT2", sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column; 
+    gap: 80px;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 60px 20px 20px;
+    text-align: center;
+    box-shadow: -6px -2px 16px 0 rgba(255, 255, 255, 0.8), 
+                6px 2px 16px 0 rgba(136, 165, 191, 0.48);
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.card .icon {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card .icon img {
+    width: 80px;
+    height: auto;
+}
+
+.card h3 {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    font-family: "FuturaPT2", sans-serif;
+}
+
+.card p {
+    font-size: 14px;
+    color: #020202;
+    margin-top: 10px;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+}
+
+.team-intro {
+    padding-bottom: 60px;
+    padding-top: 60px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.container-team {
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: -6px -2px 16px 0 rgba(255, 255, 255, 0.8), 
+                6px 2px 16px 0 rgba(136, 165, 191, 0.48);
+}
+
+.team-intro p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.team-intro .highlight {
+    color: #007bff;
+    font-style: italic;
+}
+
+/* ============ Секция контактной формы ============ */
+.contact-section {
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-image {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contact-form {
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+}
+
+/* --- Адаптивная верстка для секции "about" и т.д. --- */
+@media (min-width: 768px) {
+    .about {
+        height: 215px;
+        padding: 40px;
+        background-position: left top;  
+        background-size: contain; 
+    }
+    .about-title {
+        font-size: 2.2rem;
+    }
+    .about-us {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .about-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        flex-direction: row;
+        gap: 60px;
+    }
+    .image {
+        flex: 1;
+        max-width: 40%;
+    }
+    .content {
+        flex: 1;
+        max-width: 60%;
+        text-align: left;
+    }
+    .content h2 {
+        font-size: 1.45rem;
+    }
+    .content p {
+        font-size: 18px;
+    }
+    .why-us h2 {
+        font-size: 2rem;
+        margin-bottom: 60px;
+    }
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card {
+        max-width: 320px;
+        gap: 20px;
+    }
+    .card .icon img {
+        width: 100px;
+    }
+    .card h3 {
+        font-size: 18px;
+        margin-top: 50px;
+    }
+    .card p {
+        font-size: 16px;
+    }
+    .team-intro p {
+        font-size: 18px;
+    }
+    .contact-section {
+        padding: 50px 20px;
+    }
+    .contact-content {
+        flex-direction: row;
+    }
+    .contact-image, .contact-form {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1440px) {
+    .about-wrap {
+        gap: 120px;
+    }
+    .why-us h2 {
+        font-size: 28px;
+        margin-bottom: 100px;
+    }
+}
+
+/* ============ КАСТОМНЫЙ DROPDOWN ДЛЯ КОДА СТРАНЫ ============ */
+/* Родительский контейнер */
+.custom-select {
+    position: relative;
+    /* Можно задать фикс. ширину или оставить авто */
+    width: 100px; 
+}
+
+/* Отображаемая часть (выбранный вариант) */
+.selected-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px; 
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Добавляем стрелочку (▼) через псевдоэлемент */
+.selected-option::after {
+    content: "▼";
+    margin-left: 8px;
+    font-size: 10px;
+    color: #666;
+}
+
+/* Список опций (изначально скрыт) */
+.options-list {
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 0;
+    right: 0;
+    border-radius: 8px;
+    background: #3b3b3b;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    display: none; 
+    max-height: 220px;
+    overflow-y: auto;
+    z-index: 999;
+
+    /* Скрываем сам скроллбар во всех браузерах */
+    scrollbar-width: none;       /* Firefox */
+    -ms-overflow-style: none;    /* IE/Edge */
+}
+.options-list::-webkit-scrollbar { 
+    display: none;              /* Chrome, Safari, Opera */
+}
+
+/* Каждый пункт списка */
+.options-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.options-list li:hover {
+    background: #5a5a5a;
+}
+
+.options-list li.selected {
+    position: relative;
+    background: #4a4a4a;
+}
+.options-list li.selected::after {
+    content: "✓";
+    position: absolute;
+    right: 10px;
+    color: #fff;
+}
+
+/* === Главное изменение: телефон и код на одной линии === */
+.phone-group {
+    /* Вместо column ставим row, чтобы всегда в одну линию */
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 10px;
+    /* flex-wrap: nowrap; — можно добавить, чтобы они не переносились даже при узком экране */
+}
+.phone-group .custom-select {
+    width: 100px; /* Можно подправить ширину на ваш вкус */
+}
+.phone-group input[type="text"] {
+    flex: 1; /* Поле телефона растягивается */
+}

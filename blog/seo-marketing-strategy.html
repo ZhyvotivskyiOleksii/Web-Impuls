@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Web Impuls - Professional Web Development & Digital Solutions">
+    <meta property="og:description" content="We create high-quality websites and web applications to elevate your business.">
+    <meta property="og:image" content="./images/img/Design-Studio-Hero-Image.webp">
+    <meta property="og:url" content="https://web-impuls.com/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Web Impuls - Professional Web Development & Digital Solutions">
+    <meta name="twitter:description" content="We create high-quality websites and web applications to elevate your business.">
+    <meta name="twitter:image" content="/blog/img/blog.webp">
+
+    <link rel="icon" type="image/png" sizes="512x512" href="./images/png/favicon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/png/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/png/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/png/apple-touch-icon.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+
+    <title data-i18n="blog_title">Blog | Web-Impuls</title>
+    <meta name="description" content="Profesjonalne tworzenie stron internetowych i aplikacji dla firm.">
+
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="/blog/page-blog.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/blog/components/footer.css">
+</head>
+<body>
+
+<header class="blog-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="logo-blog">
+                <img src="/images/img/logo.png" alt="Web-Impuls Logo">
+            </a>
+            <div class="header-text">
+                <h1 data-i18n="blog_title">Blog Web-Impuls</h1>
+                <p data-i18n="blog_subtitle">Nowoczesne technologie i strategie dla Twojej firmy.</p>
+            </div>
+            <div class="header-right">
+                <div class="language-switcher">
+                    <button data-lang="pl">🇵🇱 PL</button>
+                    <button data-lang="en">🇬🇧 EN</button>
+                    <button data-lang="uk">🇺🇦 UA</button>
+                    <button data-lang="ru">🇷🇺 RU</button>
+                </div>
+                <a href="/" class="back-to-site" data-i18n="back_to_site">← Powrót na stronę</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="blog-layout">
+    <div class="container blog-container">
+
+        <!-- Левый блок (sidebar) -->
+        <aside class="blog-sidebar">
+            <div class="sidebar-header">
+                <img src="/blog/img/blog.webp" alt="Popularne artykuły">
+                <h2 data-i18n="popular_articles">Popularne artykuły</h2>
+            </div>
+            <ul class="popular-articles">
+                <li><a href="why-business-needs-website.html"><span>🌐</span> Dlaczego firma potrzebuje strony?</a></li>
+                <li><a href="responsive-design-importance.html"><span>📱</span> Responsywny design – czy jest ważny?</a></li>
+                <li><a href="seo-marketing-strategy.html"><span>🚀</span> SEO i marketing – jak zwiększyć widoczność?</a></li>
+            </ul>
+        </aside>
+
+        <!-- Основной контент (статический, но с data-i18n) -->
+        <article class="blog-article">
+            
+            <h1 data-i18n="seo_title">SEO i marketing – jak zwiększyć widoczność?</h1>
+            <img src="/blog/img/seo.webp" data-i18n-alt="seo_alt" alt="SEO i marketing – zwiększenie widoczności">
+            <!-- Примечание: для атрибутов alt можно использовать подход, когда JS подменяет alt. 
+                 Либо оставить alt статическим, если не нужно переводить. -->
+
+            <p data-i18n="seo_intro">
+                W dzisiejszych czasach samo posiadanie strony internetowej nie wystarcza. 
+                <strong>Aby przyciągnąć klientów</strong>, Twoja witryna musi być dobrze zoptymalizowana pod wyszukiwarki i widoczna dla użytkowników.
+            </p>
+
+            <h2 data-i18n="seo_section1_title">📊 Jak działa SEO?</h2>
+            <p data-i18n="seo_section1_text">
+                SEO (Search Engine Optimization) to zestaw działań, które poprawiają widoczność strony w wynikach Google. 
+                Kluczowe aspekty SEO to:
+            </p>
+            <ul>
+                <li data-i18n="seo_section1_li1">🔍 <strong>Słowa kluczowe</strong> – dopasowanie treści do zapytań użytkowników.</li>
+                <li data-i18n="seo_section1_li2">📄 <strong>Optymalizacja treści</strong> – wartościowe artykuły i opisy.</li>
+                <li data-i18n="seo_section1_li3">🌍 <strong>Link building</strong> – zdobywanie wartościowych linków do strony.</li>
+                <li data-i18n="seo_section1_li4">📱 <strong>Responsywność</strong> – strona dostosowana do urządzeń mobilnych.</li>
+                <li data-i18n="seo_section1_li5">⚡ <strong>Szybkość ładowania</strong> – im szybciej, tym lepiej dla użytkownika i SEO.</li>
+            </ul>
+
+            <h2 data-i18n="seo_section2_title">📈 Jak skutecznie prowadzić marketing internetowy?</h2>
+            <p data-i18n="seo_section2_text">
+                SEO to tylko jeden z elementów strategii marketingowej. Aby zwiększyć widoczność swojej marki, 
+                warto połączyć różne kanały promocji:
+            </p>
+            <ul>
+                <li data-i18n="seo_section2_li1">📢 <strong>Content marketing</strong> – wartościowe artykuły, blogi, poradniki.</li>
+                <li data-i18n="seo_section2_li2">🎯 <strong>Reklama Google Ads</strong> – natychmiastowy efekt w wyszukiwarce.</li>
+                <li data-i18n="seo_section2_li3">📱 <strong>Social media</strong> – Facebook, Instagram, LinkedIn.</li>
+                <li data-i18n="seo_section2_li4">📧 <strong>Email marketing</strong> – budowanie relacji z klientami.</li>
+            </ul>
+
+            <h2 data-i18n="seo_section3_title">🔍 Jak poprawić SEO Twojej strony?</h2>
+            <p data-i18n="seo_section3_text">
+                Najlepszym sposobem na skuteczne SEO jest analiza i optymalizacja strony. Jeśli chcesz:
+            </p>
+            <ul>
+                <li data-i18n="seo_section3_li1">✅ Poprawić pozycję w Google</li>
+                <li data-i18n="seo_section3_li2">✅ Zwiększyć ruch na stronie</li>
+                <li data-i18n="seo_section3_li3">✅ Zdobyć więcej klientów</li>
+            </ul>
+            <p data-i18n="seo_section3_text2">
+                ...to czas na profesjonalną optymalizację!
+            </p>
+
+            <h2 data-i18n="seo_section4_title">🚀 Jak możemy Ci pomóc?</h2>
+            <p data-i18n="seo_section4_text">
+                W Web-Impuls oferujemy kompleksowe usługi SEO i marketingu:
+            </p>
+            <ul>
+                <li data-i18n="seo_section4_li1">✅ Pełna analiza i optymalizacja SEO.</li>
+                <li data-i18n="seo_section4_li2">✅ Profesjonalne strategie content marketingowe.</li>
+                <li data-i18n="seo_section4_li3">✅ Kampanie Google Ads i reklama na social media.</li>
+            </ul>
+
+            <h2 data-i18n="seo_section5_title">🎯 Gotowy na większą widoczność?</h2>
+            <p data-i18n="seo_section5_text">
+                Skontaktuj się z nami i popraw SEO swojej strony już dziś!
+            </p>
+
+            <a href="https://web-impuls.com/contact.html" class="cta-button" data-i18n="seo_cta_button">
+                📩 Skontaktuj się z nami
+            </a>
+        </article>
+    </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="/blog/blog.js"></script>
+</body>
+</html>

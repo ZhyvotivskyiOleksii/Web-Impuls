@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /root/так7/
+Disallow: /chat/
+Allow: /
+
+Sitemap: https://web-impuls.com/sitemap.xml

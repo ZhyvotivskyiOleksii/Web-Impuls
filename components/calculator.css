@@ -1,0 +1,991 @@
+.calc-wrap{
+    margin-top: 120px;
+}
+
+
+
+.calculator-impuls{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.calculator-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calculator-left {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-left::-webkit-scrollbar {
+    display: none; 
+}
+
+.calculator-right {
+    flex: 1;
+    position: sticky; 
+    top: 120px; 
+    height: fit-content; 
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-right::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.calculator-right::-webkit-scrollbar-thumb {
+    background: rgba(0, 123, 255, 0.4); 
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.calculator-right:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 123, 255, 0.8); 
+}
+
+.calculator-right::-webkit-scrollbar-track {
+    background: transparent;
+}
+button {
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+.remove-service{
+    padding: 3px 5px;
+    background: #ff4d00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-service:hover {
+    background: #0056b3;
+}
+
+.domain-input {
+    display: flex;
+    flex-wrap: wrap; /* Элементы переносятся при нехватке места */
+    gap: 10px; /* Отступы между элементами */
+    margin-bottom: 15px;
+}
+
+.domain-input span {
+    background: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#domain-status {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.service-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.service {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+  
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.service:hover {
+    background: #e0f7fa;
+    transform: scale(1.05);
+}
+
+.service.selected {
+    background: #007bff;
+    color: white;
+}
+
+.service img {
+    max-width: 20%;
+    height: auto;
+    margin-bottom: 10px;
+    margin: 0 auto;
+}
+
+.service p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.specialist-info {
+    background: #fff8d1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.specialist-info img {
+    width: 40px;
+    height: 40px;
+}
+
+.specialist-info p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.service-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.service-item .remove-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+.total {
+    text-align: center;
+}
+
+.total p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.total button {
+    width: 100%;
+    padding: 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.total button:hover {
+    background: #0056b3;
+}
+
+
+.calculator-left p{
+    margin-bottom: 60px;
+}
+
+
+.promo-container {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    overflow: hidden; /* Убирает возможные выходы за границы */
+}
+
+.promo-icon {
+    width: 40px;
+    height: 40px;
+    background: url('/images/order/promo.png') no-repeat center center;
+    background-size: contain;
+    flex-shrink: 0; /* Иконка остаётся фиксированной по размеру */
+}
+
+.promo-container input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #f1f1f1;
+    padding: 0 10px;
+    font-size: 14px;
+    height: 100%;
+    border-radius: 0; /* Убираем все лишние закругления */
+    box-shadow: none; /* Убираем тень внутри инпута */
+}
+
+.promo-container input:focus {
+    outline: none; /* Убираем обводку при фокусе */
+    box-shadow: none; /* Убираем внутреннюю тень */
+}
+
+.promo-container input::placeholder {
+    color: #aaa;
+}
+
+.promo-container button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    height: 100%; /* Кнопка по высоте равна контейнеру */
+    flex-shrink: 0; /* Кнопка не сжимается */
+    border-radius: 0; /* Убираем лишние закругления */
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.promo-container button:hover {
+    background: #0056b3; /* Темнее при наведении */
+}
+
+
+
+
+
+.user-type {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.user-type button {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    background: #fff;
+    color: #007bff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user-type button.active {
+    background: #007bff;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.user-type button:hover {
+    background: #0056b3;
+    color: #fff;
+}
+
+
+
+
+
+
+.selected-services img,
+.selected-additional-services img {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.selected-services li,
+.selected-additional-services li {
+    display: flex;
+    align-items: center; /* Выравнивание текста и изображения по вертикали */
+    padding: 10px 5px;
+    margin-bottom: 10px;
+    background: #f9f9f9; /* Легкий фон для выделения */
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.selected-services li span,
+.selected-additional-services li span {
+    font-size: 14px; /* Уменьшение шрифта для лучшей читаемости */
+    color: #333; /* Цвет текста */
+    flex: 1; /* Текст занимает оставшееся место */
+}
+
+.selected-services li strong,
+.selected-additional-services li strong {
+    font-weight: bold;
+    color: #007bff; /* Цвет цены */
+}
+
+.selected-services li .remove-service,
+.selected-additional-services li .remove-service {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Общие стили остаются без изменений */
+
+@media screen and (max-width: 1440px) {
+    .calculator-container {
+      gap: 15px; /* Уменьшаем расстояние между блоками */
+      padding: 15px;
+    }
+  
+    .service-block {
+      grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо 3 */
+    }
+  
+    .calculator-right {
+      top: 80px; /* Сдвигаем правый блок выше */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .calculator-container {
+      flex-direction: column; /* Блоки располагаются вертикально */
+      gap: 20px;
+    }
+  
+    .calculator-left, .calculator-right {
+      flex: 1;
+      position: static; /* Отключаем фиксированную позицию правого блока */
+      padding: 15px;
+      box-shadow: none; /* Убираем тень для более плоского вида */
+    }
+  
+    
+    .service {
+      padding: 8px; /* Уменьшаем отступы внутри карточек */
+    }
+  
+    .promo-container {
+      height: auto;
+    }
+  
+    .promo-container input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .promo-container button {
+      width: 30%; /* Кнопка на всю ширину */
+    }
+  
+    button {
+      width: 100%; /* Кнопки на всю ширину */
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .calculator-container {
+      padding: 10px;
+    }
+  
+    h2, h3, p {
+      font-size: 14px; /* Уменьшаем размер заголовков и текста */
+    }
+  
+   
+  
+    .service {
+      padding: 5px; /* Минимальные отступы для карточек */
+    }
+  
+    .user-type {
+      flex-direction: column; /* Кнопки "Особа приватна" и "Фірма" становятся вертикальными */
+    }
+  
+    .user-type button {
+      width: 100%; /* Кнопки на всю ширину */
+      margin-bottom: 5px;
+    }
+  
+    .promo-container {
+      flex-direction: column; /* Элементы размещаем вертикально */
+    }
+  
+    .promo-container input,
+    .promo-container button {
+      width: 100%; /* Поле ввода и кнопка на всю ширину */
+    }
+  
+    .total button {
+      padding: 10px; /* Уменьшаем отступы кнопки */
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .domain-input {
+        flex-direction: row; /* Сохраняем строку для span и input */
+        align-items: center;
+    }
+
+    .domain-input span {
+        flex: 0 0 60px; /* Ширина для "www." */
+    }
+
+    .domain-input input {
+        flex: 1; /* Поле ввода занимает оставшееся место */
+    }
+
+    .domain-input button {
+        margin-top: 10px; /* Отступ сверху для кнопки */
+    }
+    .service img{
+        max-width: 25%;
+    }
+}
+
+/* 
+=====host====== */
+.hosting-section {
+    
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 240px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-badge {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: orange;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-features li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.green-check {
+    color: green;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.comodo {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-footer {
+    margin-top: 20px;
+}
+
+.card-footer p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-footer button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.card-footer button:hover {
+    background: #0056b3;
+}
+
+.cacl-title{
+    font-size: 2.875rem;
+    font-weight: bold;
+    font-family: "FuturaPT2", sans-serif;
+}
+
+
+.services >h3{
+    font-family: "FuturaPT2", sans-serif;
+}
+
+
+.additional-services > h3{
+    font-family: "FuturaPT2", sans-serif;
+}
+
+
+.calculator-right >h2{
+    font-family: "FuturaPT2", sans-serif;
+}
+
+
+.total > p{
+    font-family: "FuturaPT2", sans-serif;
+}
+
+#total-price{
+    font-family: "FuturaPT2", sans-serif;
+}
+
+
+.section-title{
+    font-family: "FuturaPT2", sans-serif;
+}
+
+
+
+
+
+/* Фіксована кнопка */
+.mobile-fixed-button {
+    display: none; /* Початково прихована */
+    position: fixed;
+    bottom: 20px; /* Відступ знизу */
+    left: 20px; /* Відступ зліва */
+    right: 20px; /* Відступ справа */
+    background-color: #007bff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; /* Округлення країв */
+    z-index: 1000;
+  }
+  
+  .mobile-fixed-button button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Округлення кнопки */
+  }
+  
+  .mobile-fixed-button button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Показувати кнопку лише на мобільних */
+  @media screen and (max-width: 768px) {
+    .mobile-fixed-button {
+      display: block;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Загальні стилі */
+.factors-section {
+    padding: 20px;
+ 
+  }
+  
+  .factors-section h2 {
+    text-align: center;
+font-family: "FuturaPT2", sans-serif;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 700;
+    font-size: 2.125rem;
+    letter-spacing: 0.03em;
+  }
+  
+  .factors-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .factor {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .factor h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .factor h3 span:first-child {
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+  }
+  
+  .factor p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Адаптив для планшетів (768px) */
+  @media (min-width: 768px) {
+    .factors-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Адаптив для десктопів (1024px) */
+  @media (min-width: 1024px) {
+    .factors-container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  
+    .factors-section h2 {
+        font-size: 2.125rem;
+    }
+  }
+  
+
+
+
+
+
+
+  .pricing-flexibility {
+    padding: 20px;
+  }
+  
+  .pricing-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 20px;
+  }
+  
+  .pricing-content h2 {
+    font-size: 20px;
+
+  
+    margin-bottom: 10px;
+    font-family: "FuturaPT2", sans-serif;
+    margin-bottom: 20px;
+    color: #000000;
+    font-weight: 800;
+    font-size: 2.125rem;
+    letter-spacing: 0.03em;
+  }
+  
+  .pricing-content p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  .pricing-image img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Адаптив для планшетів */
+  @media screen and (min-width: 768px) {
+    .pricing-flexibility .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .pricing-content {
+      text-align: left;
+      margin: 0;
+      max-width: 50%;
+    }
+  
+    .pricing-content h2 {
+      font-size: 24px;
+    }
+  
+    .pricing-content p {
+      font-size: 16px;
+    }
+  
+    .pricing-image img {
+      max-width: 400px;
+    }
+  }
+  
+  /* Адаптив для десктопів */
+  @media screen and (min-width: 1200px) {
+    .pricing-content h2 {
+      font-size: 28px;
+    }
+  
+    .pricing-content p {
+      font-size: 18px;
+    }
+  
+    .pricing-image img {
+      max-width: 500px;
+    }
+  }
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-section {
+
+    background: #ffffff;
+   
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-image {
+    width: 100%;
+    text-align: center;
+}
+
+.contact-image img {
+    max-width: 80%;
+    height: auto;
+}
+
+.contact-form {
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+}
+
+
+@media (min-width: 768px) {
+
+
+    .contact-section {
+        padding: 50px 20px;
+    }
+
+    .contact-content {
+        flex-direction: row;
+    }
+
+    .contact-image, .contact-form {
+        flex: 1;
+    }
+    .contact-section {
+        padding: 0 0 60px 0;
+    }
+}
+
+.promo-message {
+    margin-top: 5px;
+    font-size: 14px;
+    color: green;
+    display: none; /* Спочатку приховане */
+  }
+  
+  .promo-message.error {
+    color: red;
+  }
+  
+
+
+  .cena-card{
+    position: relative;
+    
+    bottom: 30px;
+    padding: 5px;
+    background: #068f0f;
+    border-radius: 6px;
+    color: #ffffff;
+    
+  }
+
+
+
+  .cena-card-usl{
+    position: relative;
+    bottom: 30px;
+    padding: 5px;
+    background: #1e83f7;
+    border-radius: 6px;
+    color: #ffffff;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

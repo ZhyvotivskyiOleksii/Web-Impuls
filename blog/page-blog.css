@@ -1,0 +1,106 @@
+
+.blog-article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Lora', serif;
+    color: #333;
+}
+
+.blog-article h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.blog-article img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-article ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-article ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Кнопка CTA */
+.cta-button {
+    display: inline-block;
+    background: #008CFF; /* Голубой цвет */
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .blog-article {
+        padding: 15px;
+    }
+
+    .blog-article h1 {
+        font-size: 24px;
+    }
+
+    .blog-article ul li {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+
+/* Стили для мобильного меню */
+.blog-header {
+    background-color: #008CFF;
+    padding: 20px;
+}
+
+.
+
+.language-switcher button:hover {
+    background-color: #006BB3;
+}
+
+/* Стили для текста */
+.blog-article h2 {
+    font-size: 24px;
+    color: #008CFF;
+    margin-top: 30px;
+}
+
+.blog-article p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.blog-layout{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+
+

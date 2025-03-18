@@ -1,0 +1,257 @@
+.hero {
+  padding-top: 7.5rem;
+  padding-bottom: 20rem;
+  position: relative;
+  background-image: url(/images/img/Design-Studio.webp);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+}
+
+.hero-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 0.03em;
+  color: #2e363e;
+  font-weight: 800;
+  font-family: "FuturaPT3", sans-serif;
+}
+
+#animated-text {
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: #2e363e;
+  font-weight: 800;
+  font-family: "FuturaPT3", sans-serif;
+}
+
+.hero-title .busines #animated-text {
+  display: inline-block;
+}
+
+.hero-subtitle {
+  text-align: center;
+  margin-bottom: 1.875rem;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #434b53;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 0.9375rem 1.875rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap; /* Предотвращает перенос текста */
+  box-shadow: -0.375rem -0.125rem 1rem 0 rgba(255, 255, 255, 0.8),
+              0.375rem 0.125rem 1rem 0 rgba(136, 165, 191, 0.48);
+  background: linear-gradient(
+    233deg,
+    #2cd9ff 0%,
+    #1e8ff8 18.23%,
+    #1e8ff8 81%,
+    #d4e8f7 100%,
+    #0d3885 100%
+  );
+  border: none;
+  border-radius: 3.125rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.hero-button:hover {
+  background: linear-gradient(
+    53deg,
+    #2cd9ff 0%,
+    #1e8ff8 18.23%,
+    #1e8ff8 81%,
+    #d4e8f7 100%,
+    #0d3885 100%
+  );
+  transform: scale(1.05) translateZ(0);
+}
+
+
+.span-hero {
+  text-align: center;
+}
+
+.offering {
+  color: #1e8ff8;
+  font-size: 1rem;
+  line-height: 1.43;
+  letter-spacing: -0.03em;
+}
+
+.hero-text-wrap {
+  flex-direction: column;
+  text-align: center;
+}
+
+.hero-time {
+  font-weight: 800;
+  color: #1e8ff8;
+  font-family: "FuturaPT3", sans-serif;
+}
+
+.busines {
+  color: hsl(209, 94%, 55%);
+  font-family: "FuturaPT2", sans-serif;
+  font-weight: 800;
+  font-family: "FuturaPT3", sans-serif;
+}
+
+.hero-btn-icon {
+  margin-left: 1rem;
+  fill: #fff;
+}
+
+.img-top {
+  width: 18.75rem;
+  margin: 0 auto;
+  margin-top: 3.75rem;
+  animation: spin 20s linear infinite;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 7.5rem;
+    padding-bottom: 0;
+    position: relative;
+    background-image: url(/images/img/Design-Studio.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+  }
+
+  .hero-container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .hero-box {
+    align-items: flex-start;
+  }
+
+  .hero-btn-box {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .hero-text-wrap {
+    display: flex;
+    gap: 0.625rem;
+  }
+
+  .span-hero {
+    text-align: left;
+  }
+
+  .img-top {
+    width: 25rem;
+  }
+
+  .busines {
+    color: #1e8ff8;
+    font-size: 3.125rem;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    font-weight: 800;
+    font-family: "FuturaPT3", sans-serif;
+  }
+
+  .hero-title {
+    font-weight: 700;
+    font-size: 3.125rem;
+    letter-spacing: 0.03em;
+    color: #2e363e;
+    margin-bottom: 1.5625rem;
+    font-weight: 800;
+    font-family: "FuturaPT2", sans-serif;
+    width: 25rem;
+    text-align: left;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 1.5625rem;
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    color: #434b53;
+    width: 20.875rem;
+    text-align: left;
+  }
+
+  .hero-btn:hover {
+    background-color: #0570d4;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-title {
+    padding-top: 8.75rem;
+    font-size: 6rem;
+    letter-spacing: 0.06em;
+    color: #2e363e;
+    margin-bottom: 1.5625rem;
+    white-space: nowrap;
+    font-family: "FuturaPT3", sans-serif;
+  }
+
+  .hero-subtitle {
+    margin-bottom: 1.5625rem;
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+    color: #434b53;
+    width: 37.5rem;
+  }
+
+  .busines {
+    color: #1e8ff8;
+    font-family: "FuturaPT2", sans-serif;
+    font-weight: 800;
+    font-family: "FuturaPT3", sans-serif;
+    font-size: 6rem;
+  }
+
+  #animated-text {
+    font-size: 6rem;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: #2e363e;
+    font-weight: 800;
+    font-family: "FuturaPT3", sans-serif;
+  }
+
+  .hero {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    position: relative;
+    background-image: url(/images/img/Design-Studio.webp);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
