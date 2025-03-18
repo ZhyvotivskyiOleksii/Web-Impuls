@@ -1,100 +1,167 @@
-
 .multibutton {
-    position: fixed;
-    right: 30px;
-    bottom: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 9;
-    transition: 0.2s ease;
-  }
-  
-  .multibutton__container {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-  }
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9;
+  transition: all 0.2s ease;
+}
 
-  .multibutton__info {
-    font-size: 18px;
-    color: #066fe2;
-    white-space: nowrap;
-    font-family: "FuturaPT2", sans-serif;
+.multibutton__container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    opacity: 1;
-    transition: opacity 0.3s ease;
-  }
-  
-  .multibutton.active .multibutton__info {
-    opacity: 0; 
-  }
-  
+.multibutton__info {
+  font-size: 18px;
+  color: #066fe2;
+  white-space: nowrap;
+  font-family: "FuturaPT2", sans-serif;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 
-  .multibutton__button {
-    width: 70px;
-    height: 70px;
-    background: #046fe2;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    animation: animation_button 3s linear infinite;
-    transition: all 200ms ease-out;
-  }
-  
+.multibutton.active .multibutton__info {
+  opacity: 0;
+}
 
-  @keyframes animation_button {
-    0% {
-      box-shadow: 0 0 0 0 #679bf3, 0 0 0 0 rgba(6, 186, 240, 0.7);
-    }
-    40% {
-      box-shadow: 0 0 0 13.62667px rgba(255, 186, 38, 0), 0 0 0 6.81333px rgba(11, 75, 237, 0.7);
-    }
-    80% {
-      box-shadow: 0 0 0 27.25333px rgba(255, 186, 38, 0), 0 0 0 13.62667px rgba(255, 206, 9, 0);
-    }
-    100% {
-      box-shadow: 0 0 0 34.06667px rgba(255, 186, 38, 0), 0 0 0 27.25333px rgba(255, 206, 9, 0);
-    }
-  }
-  
-  .multibutton__button img {
-    width: 30px;
-    height: 30px;
-  }
-  
+/* Главная кнопка с улучшенными импульсами */
+.multibutton__button {
+  width: 50px;
+  height: 50px;
+  background: #046fe2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: impulse 2.5s infinite ease-in-out;
+}
 
-  .multibutton__list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    position: absolute;
-    right: 0;
-    bottom: 80px;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.3s, opacity 0.3s ease;
-  }
-  
-  .multibutton.active .multibutton__list {
-    visibility: visible;
-    opacity: 1;
-  }
-  
+.multibutton__button:hover {
+  transform: scale(1.1);
+  background: #0585ff;
+}
 
-  .multibutton__item {
-    margin: 5px 0;
-    transform: translateY(-20px);
-    opacity: 0;
-    visibility: hidden;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+/* Красивая анимация импульсов */
+@keyframes impulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(6, 111, 226, 0.7), 0 0 0 0 rgba(5, 133, 255, 0.5);
   }
-  
-  .multibutton.active .multibutton__item {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
+  50% {
+    box-shadow: 0 0 0 10px rgba(6, 111, 226, 0.4), 0 0 0 20px rgba(5, 133, 255, 0.2);
   }
-  
+  100% {
+    box-shadow: 0 0 0 20px rgba(6, 111, 226, 0), 0 0 0 30px rgba(5, 133, 255, 0);
+  }
+}
+
+.multibutton__button img {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Список кнопок */
+.multibutton__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  opacity: 0;
+  transition: opacity 0.1s ease; /* Укороченный переход для общего контейнера */
+}
+
+.multibutton.active .multibutton__list {
+  opacity: 1;
+}
+
+/* Элементы списка с круглыми иконками */
+.multibutton__item {
+  margin: 8px 0;
+  transform: translateY(20px); /* Начальное положение — ниже */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.multibutton.active .multibutton__item {
+  transform: translateY(0); /* Появление — вверх */
+  opacity: 1;
+}
+
+/* Обратная анимация при скрытии (сверху вниз) */
+.multibutton:not(.active) .multibutton__item {
+  transform: translateY(-20px); /* Скрытие — вверх */
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Последовательная анимация появления снизу вверх */
+.multibutton.active .multibutton__item:nth-child(1) {
+  transition-delay: 0.4s; /* Последний появляется первым */
+}
+.multibutton.active .multibutton__item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.multibutton.active .multibutton__item:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.multibutton.active .multibutton__item:nth-child(4) {
+  transition-delay: 0.1s; /* Первый в списке появляется последним */
+}
+
+/* Последовательная анимация скрытия сверху вниз */
+.multibutton:not(.active) .multibutton__item:nth-child(1) {
+  transition-delay: 0.1s; /* Первый скрывается первым */
+}
+.multibutton:not(.active) .multibutton__item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.multibutton:not(.active) .multibutton__item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.multibutton:not(.active) .multibutton__item:nth-child(4) {
+  transition-delay: 0.4s; /* Последний скрывается последним */
+}
+
+/* Стили для круглых иконок */
+.multibutton__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.multibutton__item a:hover {
+  transform: scale(1.1);
+}
+
+.multibutton__item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Стили для Telegram */
+.chat-menu-item.telegram {
+  background: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
