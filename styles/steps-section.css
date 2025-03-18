@@ -1,0 +1,139 @@
+/* Стили секции "steps" */
+.steps-section-isolated {
+  padding: 20px 15px;
+
+}
+
+.steps-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.steps-subtitle {
+  font-size: 0.85rem;
+  font-weight: bold;
+  font-family: "FuturaPT2", sans-serif;
+  color: #228ff8;
+  text-transform: uppercase;
+  position: relative;
+  left: 2rem;
+}
+
+.steps-subtitle::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 0.125rem;
+  background-color: #228ff8;
+  position: absolute;
+  top: 50%;
+  left: -2.5rem;
+  transform: translateY(-50%);
+}
+
+.steps-title {
+  font-size: 1.55rem;
+  font-weight: 700;
+  font-family: "FuturaPT2", sans-serif;
+  color: #000000;
+  margin-bottom: 0.9375rem;
+  text-align: left;
+  max-width: 100%;
+}
+
+/* Список шагов */
+.steps-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.steps-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.steps-number {
+  font-family: "FuturaPT2", sans-serif;
+  font-size: 24px;
+  color: #007bff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.steps-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2e363e;
+  font-family: "FuturaPT2", sans-serif;
+}
+
+.steps-description {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #434b53;
+}
+
+/* Медиазапросы */
+@media (min-width: 480px) {
+  .steps-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .steps-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+  }
+
+  .steps-item {
+      padding: 25px;
+  }
+
+  .steps-number {
+      font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .steps-list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .steps-list {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+  }
+
+  .steps-section-isolated {
+      padding: 80px 40px;
+  }
+
+  .steps-item {
+      padding: 30px;
+  }
+
+  .steps-number {
+      font-size: 36px;
+  }
+}
+@media (min-width: 1200px) {
+  .steps-list {
+      grid-template-columns: repeat(4, 1fr); /* 4 картки в ряд */
+      gap: 30px;
+  }
+}

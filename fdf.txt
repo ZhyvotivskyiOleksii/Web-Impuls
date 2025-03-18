@@ -1,0 +1,74 @@
+ssh -o ServerAliveInterval=60 wisebets@uashared32.twinservers.net -L 3306:localhost:3306 -p 21098
+xLt2w58H0e
+
+
+php -S localhost:8000
+
+
+newadmin
+newpassword
+
+
+
+
+Вот SQL-запрос для добавления нового пользователя (администратора) с логином и хешированным паролем в вашу таблицу admins:
+
+sql
+Копіювати
+Редагувати
+INSERT INTO admins (admin, password) 
+VALUES ('newadmin', 'newhashedpassword');
+Обратите внимание:
+
+Замените 'newadmin' на желаемое имя пользователя.
+Замените 'newhashedpassword' на хешированный пароль, который вы получите с помощью PHP.
+Чтобы сгенерировать хеш пароля в PHP, выполните следующий код:
+
+php
+Копіювати
+Редагувати
+<?php
+echo password_hash('newpassword', PASSWORD_DEFAULT);
+?>
+После выполнения этого кода, замените newhashedpassword в SQL-запросе на результат, который сгенерирует PHP.
+
+Например, если результат хеширования будет:
+
+perl
+Копіювати
+Редагувати
+$2y$10$wJlB9K6sL1xw9TlM/OcZ7.OjS1UtPvg78OEjQQxuGHm4W5fAT3f8G
+Тогда ваш SQL-запрос будет таким:
+
+sql
+Копіювати
+Редагувати
+INSERT INTO admins (admin, password) 
+VALUES ('newadmin', '$2y$10$wJlB9K6sL1xw9TlM/OcZ7.OjS1UtPvg78OEjQQxuGHm4W5fAT3f8G');
+Теперь выполните этот запрос в вашей базе данных, чтобы добавить нового пользователя.
+
+
+
+
+
+
+localStorage.clear(); 
+
+
+sessionStorage.clear();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

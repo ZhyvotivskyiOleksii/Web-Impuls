@@ -1,0 +1,112 @@
+.contact-section {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: "FuturaPT2", sans-serif;
+    color: #228ff8;
+    text-transform: uppercase;
+    position: relative;
+    left: 2rem;
+  }
+  .section-title::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 0.125rem;
+    background-color: #228ff8;
+    position: absolute;
+    top: 50%;
+    left: -2.5rem;
+    transform: translateY(-50%);
+  }
+
+
+  .section-description {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  .contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contact-card .icon {
+    margin-bottom: 10px;
+  }
+  
+  .contact-card .icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .contact-card p {
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+  }
+  
+
+
+
+  .map-section {
+  
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .section-description {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  

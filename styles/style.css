@@ -1,0 +1,141 @@
+body {
+    font-family: "FuturaPT1", sans-serif;
+   box-sizing: border-box;
+  }
+  
+  * {
+    font-style: normal;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: "FuturaPT1", sans-serif;
+    line-height: 125%;
+    letter-spacing: 0.03em;
+  }
+  
+  .container {
+    max-width: 1280px;
+   padding: 0 20px;
+    margin: 0 auto;
+    
+  }
+  .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .section-title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #0c0c0c;
+    margin-bottom: 24px;
+  }
+  .section-text {
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: rgba(12, 12, 12, 0.7);
+  }
+  /* @media screen and (min-width: 375px) {
+    .container {
+      width: 375px;
+    }
+  } */
+  
+  @media screen and (min-width: 768px) {
+   
+  
+    .section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  
+    .section-title {
+      font-size: 48px;
+      line-height: 0.92;
+      margin-bottom: 40px;
+    }
+  
+    .section-text {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+  
+
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+  @font-face {
+    font-family: FuturaPT2;
+    src: url(../fonts/futura_pt_bold.ttf);
+  }
+  
+  @font-face {
+    font-family: FuturaPT1;
+    src: url(../fonts/futura_pt_book.ttf);
+  }
+  
+  @font-face {
+    font-family: FuturaPT3;
+    src: url(../fonts/futura_pt_cond_extra_bold.ttf);
+  }
+ 
+
+
+
+
+
+
+
+
+
+
+  /* Общие стили для всех текстовых полей */
+input[type="text"],
+textarea {
+  width: 100%; /* Поля заполняют ширину родителя */
+  max-width: 100%; /* Не выходят за пределы контейнера */
+  padding: 10px; /* Внутренние отступы */
+  font-size: 16px; /* Размер шрифта */
+  border: 1px solid #ccc; /* Граница */
+  border-radius: 5px; /* Скругленные углы */
+  outline: none; /* Убираем стандартный контур */
+  box-sizing: border-box; /* Учет границ и отступов внутри размера */
+  resize: none; /* Отключаем изменение размера для textarea */
+}
+
+
+
+/* Ограничиваем высоту textarea */
+textarea {
+  min-height: 100px; 
+  max-height: 200px; 
+  overflow-y: auto; 
+}
+
+/* Убираем увеличение на мобильных устройствах при вводе */
+input[type="text"],
+textarea {
+  -webkit-appearance: none; 
+  -webkit-text-size-adjust: 100%; 
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+
+input[type="text"],
+textarea {
+  font-size: 16px; 
+}
