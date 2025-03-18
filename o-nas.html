@@ -241,38 +241,37 @@
 
 
     <!-- =================button-soc-media================== -->
-    <div class="chat-wrapper">
-      <div class="chat-container">
-        <div class="chat-online-bar">
-          <img src="/images/cz-1.png" alt="Chat Icon" class="chat-character">
-          <div class="chat-text-wrapper">
-            <span class="chat-text" data-translate-key="chatOnline">Chat Online</span>
-            <span class="chat-subtext" data-translate-key="writeUs"><br>Write to us </span> <!-- Новый текст -->
-          </div>
-        </div>
-        <div class="chat-menu">
-          <a href="https://t.me/WebImpuls" class="chat-menu-item telegram" data-translate-key="telegram">
-            <img src="/images/teleg-ch.svg" alt="Telegram" class="chat-icon"> Telegram
-          </a>
-          
-          <a href="sms:+48572245574" class="chat-menu-item apple-messages" data-translate-key="appleMessages">
-            <img src="/images/Messages_apple.png" alt="Apple Messages" class="chat-icon"> Apple
-          </a>
-          <a href="viber://chat?number=%2B48572245574" class="chat-menu-item viber" data-translate-key="viber">
-            <img src="/images/Viber_ch.svg" alt="Viber" class="chat-icon"> Viber
-          </a>      
-          <a href="https://m.me/YourPageName" class="chat-menu-item messenger" data-translate-key="messenger">
-            <img src="/images/Facebook_Messenger_ch.svg" alt="Messenger" class="chat-icon"> Messenger
-          </a>
-          <a href="javascript:void(0);" class="chat-menu-item chat" id="chat-button" data-translate-key="chat">
-            <img src="/images/chat-1.svg" alt="Chat" class="chat-icon">
-            <div class="chat-text-wrapper">
-              <span data-translate-key="chatText">Chat</span>
-              <small class="chat-response-time" data-translate-key="workingHours">Время работы с 8:00 - 17:00</small>
-            </div>
-          </a>
+    <div class="multibutton">
+      <div class="multibutton__container">
+        <div class="multibutton__info" data-translate-key="free_consultation">24/7</div>
+        <div class="multibutton__button">
+          <img src="/images/swg/chat.png" alt="chat" loading="lazy" class="icon-chat" width="30" height="30">
+          <img src="/images/swg/cross.svg" alt="close" loading="lazy" class="icon-close" width="30" height="30" style="display:none;">
         </div>
       </div>
+    
+      <ul class="multibutton__list">
+        <li class="multibutton__item">
+          <a href="https://www.facebook.com/people/Web-impuls/61559794323482/?mibextid=LQQJ4d">
+            <img src="/images/footer/messenger.svg" width="60" height="60" alt="messenger" loading="lazy">
+          </a>
+        </li>
+        <li class="multibutton__item">
+          <a href="tel:+48572245574">
+            <img src="/images/Messages_apple.png" width="60" height="60" alt="apple messages" loading="lazy">
+          </a>
+        </li>
+        <li class="multibutton__item">
+          <a href="tel:+48572245574">
+            <img src="/images/footer/viber.svg" width="60" height="60" alt="viber" loading="lazy">
+          </a>
+        </li>
+        <li class="multibutton__item">
+          <a href="https://t.me/WebImpuls" class="chat-menu-item telegram" data-translate-key="telegram">
+            <img src="/images/teleg-ch.svg" width="60" height="60" alt="Telegram" class="chat-icon">
+          </a>
+        </li>
+      </ul>
     </div>
 
 
@@ -313,7 +312,7 @@
     <!-- Застосування defer -->
   <script src="js/main.js" defer></script>
 
-  <!-- <script src="js/contact-btn.js" defer></script> -->
+  <script src="js/contact-btn.js" defer></script>
   <script src="js/modal-form.js" defer></script>
   <script src="js/form.js" defer></script>
   <script src="js/animations.js" defer></script>
@@ -321,7 +320,7 @@
   <script src="js/info-card.js" defer></script>
   <!-- <script src="js/popap-calc.js" defer></script> -->
   <script src="js/translations.js" defer></script>
-  <script src="js/chat-online.js" defer></script>
+
 </body>
 
 </html>
