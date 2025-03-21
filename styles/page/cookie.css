@@ -26,13 +26,6 @@
   text-decoration: underline;
   padding-bottom: 10px;
 }
-
-
-.cookie-policy-list > li{
-  list-style-type: disc;
-}
-
-
 .cookie-banner {
   position: fixed;
   bottom: 20px;
