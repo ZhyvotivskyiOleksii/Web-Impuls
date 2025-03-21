@@ -1,0 +1,191 @@
+:root {
+    --carousel-radius-desktop: 600px;
+    --carousel-radius-mobile: 400px;
+    --carousel-radius: var(--carousel-radius-desktop);
+  }
+  
+  #myCarouselSection {
+    padding-top: 60px;
+    padding-bottom: 160px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .my-carousel-container h2 {
+    font-size: 40px;
+    font-family: "FuturaPT2", sans-serif;
+    margin-bottom: 60px;
+    font-weight: 800;
+    color: #0af;
+    letter-spacing: 2px;
+  }
+  
+  .my-carousel-3d {
+    perspective: 2000px;
+    position: relative;
+    margin: 0 auto;
+    height: 400px;
+  }
+  
+  @media (max-width: 768px) {
+    .my-carousel-3d {
+      height: 350px;
+    }
+  }
+  
+  .my-carousel-items {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+  }
+  
+  .my-carousel-item {
+    position: absolute;
+    width: 260px;
+    height: 360px;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    margin: -180px 0 0 -130px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 2px solid rgba(0, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0.5;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .my-carousel-item.active {
+    opacity: 1;
+    transform: translateZ(var(--carousel-radius));
+  }
+  
+  .my-carousel-item img {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
+    display: block;
+    
+  }
+  
+  .my-item-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .my-item-overlay h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #0af;
+  }
+  
+  .my-item-overlay p {
+    margin: 5px 0 0;
+    font-size: 14px;
+  }
+  
+  .my-carousel-nav-container {
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .my-carousel-nav {
+    display: inline-flex;       
+    align-items: center;        
+    justify-content: center;    
+    width: 50px;                
+    height: 50px;
+    border-radius: 50%;
+    background: #00152a;
+    border: none;
+    color: #0af;
+    font-size: 32px;
+    cursor: pointer;
+    transition: background 0.5s;
+    margin: 0 60px;
+  }
+  
+  
+  .my-carousel-nav:hover {
+    background: #002c55;
+  }
+  
+  @media (max-width: 768px) {
+    .my-carousel-item {
+      width: 180px;
+      height: 240px;
+      margin: -120px 0 0 -90px;
+    }
+    .my-carousel-nav-container {
+        
+        bottom: -50px;
+      }
+
+      #myCarouselSection {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+  }
+  
+  .my-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .my-modal-content {
+    background-color: #0b1e2f;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #0af;
+    width: 80%;
+    max-width: 800px;
+    color: #fff;
+    position: relative;
+  }
+  
+  .my-modal-close {
+    color: #0af;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .my-modal-close:hover {
+    color: #fff;
+  }
+  
+  .my-modal-vertical-list {
+    max-height: 80vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .my-modal-vertical-list img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #0af;
+  }
+  

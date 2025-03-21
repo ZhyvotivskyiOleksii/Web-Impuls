@@ -388,7 +388,7 @@ body.no-scroll {
   }
   .mobile-mini-header {
     flex-direction: row; 
-    width: auto; /* или 95%, если хотите */
+    width: auto; 
     justify-content: flex-start; 
   }
   .mobile-mini-header .social-icon img {
@@ -399,7 +399,7 @@ body.no-scroll {
     padding: 4px;
   }
   .mobile-mini-header .theme-toggle {
-    width: 75px;
+  
     height: 30px;
   }
   .mobile-mini-header .theme-toggle .theme-slider {
