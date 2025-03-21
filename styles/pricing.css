@@ -39,7 +39,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 60px;
   margin: 0 auto;
   max-width: 1200px;
   padding-top: 60px;
@@ -60,7 +60,7 @@
   transition: transform 0.3s ease-in-out;
 }
 .pricing-card:hover {
-  transform: scale(1.3);
+  transform: scale(1.1);
 }
 .card-image-wrapper {
   position: absolute;
@@ -160,7 +160,7 @@
   height: 200%;
   background: rgba(255, 255, 255, 0.4);
   transform: rotate(30deg);
-  transition: 0.5s ease-in-out;
+  transition: 0.7s ease-in-out;
   opacity: 0;
 }
 
