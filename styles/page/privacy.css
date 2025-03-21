@@ -1,0 +1,177 @@
+/* Основні стилі для секції */
+.privacy-section {
+    padding: 150px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .privacy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .privacy-title {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .privacy-version {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Навігація */
+  .privacy-nav {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .privacy-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .privacy-nav li {
+    display: inline-block;
+  }
+  
+  .privacy-nav a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #333; /* Колір кнопок узгоджений із футером */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .privacy-nav a:hover {
+    background-color: #555; /* Темніший відтінок при наведенні */
+  }
+  
+  /* Контент */
+  .privacy-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .privacy-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .privacy-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Roboto Mono', monospace;
+  }
+  
+  .privacy-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Плавний скрол */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Адаптивність для екранів від 320px */
+  @media (max-width: 768px) {
+    .privacy-title {
+      font-size: 28px;
+    }
+  
+    .privacy-version {
+      font-size: 14px;
+    }
+  
+    .privacy-nav ul {
+      gap: 10px;
+    }
+  
+    .privacy-nav a {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .privacy-item h2 {
+      font-size: 20px;
+    }
+  
+    .privacy-item p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .privacy-section {
+      padding: 30px 15px;
+    }
+  
+    .privacy-title {
+      font-size: 24px;
+    }
+  
+    .privacy-version {
+      font-size: 12px;
+    }
+  
+    .privacy-nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .privacy-nav a {
+      font-size: 13px;
+      padding: 8px 20px;
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+    }
+  
+    .privacy-item h2 {
+      font-size: 18px;
+    }
+  
+    .privacy-item p {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .privacy-section {
+      padding: 20px 10px;
+    }
+  
+    .privacy-title {
+      font-size: 20px;
+    }
+  
+    .privacy-nav a {
+      font-size: 12px;
+      padding: 6px 15px;
+    }
+  
+    .privacy-item h2 {
+      font-size: 16px;
+    }
+  
+    .privacy-item p {
+      font-size: 12px;
+    }
+  }

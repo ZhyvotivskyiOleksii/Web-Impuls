@@ -1,0 +1,177 @@
+/* Основні стилі для секції */
+.terms-section {
+    padding: 150px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .terms-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .terms-title {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  
+  }
+  
+  .terms-version {
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Навігація */
+  .terms-nav {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .terms-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .terms-nav li {
+    display: inline-block;
+  }
+  
+  .terms-nav a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #228ff8; /* Колір кнопок узгоджений із футером */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .terms-nav a:hover {
+    background-color: #555; /* Темніший відтінок при наведенні */
+  }
+  
+  /* Контент */
+  .terms-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .term-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .term-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  
+  }
+  
+  .term-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  /* Плавний скрол */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Адаптивність для екранів від 320px */
+  @media (max-width: 768px) {
+    .terms-title {
+      font-size: 28px;
+    }
+  
+    .terms-version {
+      font-size: 14px;
+    }
+  
+    .terms-nav ul {
+      gap: 10px;
+    }
+  
+    .terms-nav a {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .term-item h2 {
+      font-size: 20px;
+    }
+  
+    .term-item p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .terms-section {
+      padding: 30px 15px;
+    }
+  
+    .terms-title {
+      font-size: 24px;
+    }
+  
+    .terms-version {
+      font-size: 12px;
+    }
+  
+    .terms-nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .terms-nav a {
+      font-size: 13px;
+      padding: 8px 20px;
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+    }
+  
+    .term-item h2 {
+      font-size: 18px;
+    }
+  
+    .term-item p {
+      font-size: 13px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .terms-section {
+      padding: 20px 10px;
+    }
+  
+    .terms-title {
+      font-size: 20px;
+    }
+  
+    .terms-nav a {
+      font-size: 12px;
+      padding: 6px 15px;
+    }
+  
+    .term-item h2 {
+      font-size: 16px;
+    }
+  
+    .term-item p {
+      font-size: 12px;
+    }
+  }
