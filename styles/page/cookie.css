@@ -42,7 +42,6 @@
   max-width: 500px;
   width: 90%;
   z-index: 1000;
-}
 
 .cookie-banner__image-container {
   flex-shrink: 0;

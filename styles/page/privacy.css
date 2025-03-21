@@ -1,4 +1,4 @@
-/* Основні стилі для секції */
+
 .privacy-section {
     padding: 150px 20px;
     background-color: #f9f9f9;
@@ -14,7 +14,7 @@
     color: #333;
     text-align: center;
     margin-bottom: 10px;
-    font-family: 'Roboto Mono', monospace;
+   
   }
   
   .privacy-version {
@@ -46,7 +46,7 @@
   .privacy-nav a {
     display: block;
     padding: 10px 20px;
-    background-color: #333; /* Колір кнопок узгоджений із футером */
+    background-color: #228ff8; /* Колір кнопок узгоджений із футером */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -76,7 +76,7 @@
     font-size: 24px;
     color: #333;
     margin-bottom: 15px;
-    font-family: 'Roboto Mono', monospace;
+
   }
   
   .privacy-item p {
