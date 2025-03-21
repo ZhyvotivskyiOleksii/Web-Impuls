@@ -368,3 +368,46 @@ body.dark-mode .dropdown-option {
 body.dark-mode .dropdown-option:hover {
     background-color: #313131;
 }
+
+
+
+body.dark-mode .terms-section{
+    background-color: #33333f;
+    
+}
+
+body.dark-mode .term-item{
+    background-color: #33333f;
+    ;
+}
+
+
+
+body.dark-mode .term-item > h2{
+    color: #ffffff;
+}
+
+body.dark-mode .terms-title {
+    color: #ffffff;
+}
+
+
+body.dark-mode .privacy-section{
+    background-color: #33333f;
+    
+}
+
+body.dark-mode .privacy-title{
+    color: #ffffff;
+}
+
+
+body.dark-mode .privacy-item{
+    background-color: #33333f;
+    
+}
+
+
+body.dark-mode .privacy-item h2{
+    color: #ffffff;
+}
