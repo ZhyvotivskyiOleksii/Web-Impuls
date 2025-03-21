@@ -45,7 +45,6 @@
   letter-spacing: -0.01em;
   color: #434b53;
 }
-
 .hero-button {
   display: inline-block;
   padding: 0.9375rem 1.875rem;
@@ -53,7 +52,66 @@
   font-weight: bold;
   color: #ffffff;
   text-align: center;
-  white-space: nowrap; /* Предотвращает перенос текста */
+  white-space: nowrap; /* Запобігає переносу тексту */
+  box-shadow: -0.375rem -0.125rem 1rem 0 rgba(255, 255, 255, 0.8),
+    0.375rem 0.125rem 1rem 0 rgba(136, 165, 191, 0.48);
+  background: linear-gradient(
+    233deg,
+    #2cd9ff 0%,
+    #1e8ff8 18.23%,
+    #1e8ff8 81%,
+    #d4e8f7 100%,
+    #0d3885 100%
+  );
+  border: none;
+  border-radius: 3.125rem;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Додаємо відблиск */
+.hero-button::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 250%;
+  height: 250%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(30deg);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.hero-button:hover::before {
+  left: 100%;
+  top: 100%;
+  opacity: 1;
+}
+
+.hero-button:hover {
+  background: linear-gradient(
+    53deg,
+    #2cd9ff 0%,
+    #1e8ff8 18.23%,
+    #1e8ff8 81%,
+    #d4e8f7 100%,
+    #0d3885 100%
+  );
+  transform: scale(1.05) translateZ(0);
+}
+
+/* .hero-button {
+  display: inline-block;
+  padding: 0.9375rem 1.875rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap; 
   box-shadow: -0.375rem -0.125rem 1rem 0 rgba(255, 255, 255, 0.8),
               0.375rem 0.125rem 1rem 0 rgba(136, 165, 191, 0.48);
   background: linear-gradient(
@@ -81,8 +139,7 @@
     #0d3885 100%
   );
   transform: scale(1.05) translateZ(0);
-}
-
+} */
 
 .span-hero {
   text-align: center;

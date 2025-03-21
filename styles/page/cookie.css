@@ -17,14 +17,16 @@
   font-size: 32px;
 }
 .cookie-policy-text {
-  font-size: 24px;
+  font-size: 18px;
   padding-bottom: 10px;
 }
 .cookie-policy-list {
-  font-size: 22px;
+  font-size: 16px;
   padding-left: 40px;
-  text-decoration: underline;
   padding-bottom: 10px;
+}
+.cookie-policy-list > li {
+  list-style-type: disc;
 }
 .cookie-banner {
   position: fixed;
