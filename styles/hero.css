@@ -82,7 +82,7 @@
   height: 250%;
   background: rgba(255, 255, 255, 0.3);
   transform: rotate(30deg);
-  transition: 0.5s ease-in-out;
+  transition: 0.7s ease-in-out;
   opacity: 0;
 }
 
