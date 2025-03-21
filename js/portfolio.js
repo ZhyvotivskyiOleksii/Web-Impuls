@@ -76,9 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 500);
   }
 
-  // Закрытие при клике на фон (вне .my-modal-content)
   myModal.addEventListener("click", (e) => {
-    // Если кликнули именно по фону (текущая цель — myModal, а не дочерний элемент)
     if (e.target === myModal) {
       closeModal();
     }
@@ -117,29 +115,30 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case "2":
           content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <img src="./images/portfolio/dashboard.svg" alt="Admin">
-              </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/dashboard.svg" alt="Image 1">
-                  </div>
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/dashboard.svg" alt="Image 2">
-                  </div>
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/dashboard.svg" alt="Image 3">
-                  </div>
-                </div>
-                <div class="modal-project-description">
-                  <p>Описание проекта Admin. Responsive Dashboard с подробностями.</p>
-                </div>
-              </div>
-            </div>
-          `;
-          break;
+     <div class="modal-project">
+  <div class="modal-project-top">
+    <div class="site-about">
+      <h1>Responsive Admin Dashboard</h1>
+      <p>This project showcases a modern, fully responsive admin dashboard designed to simplify data management and analytics. Built with HTML, CSS, and JavaScript, it allows easy customization, real-time updates, and intuitive navigation. The clean interface and well-structured layout ensure a user-friendly experience for administrators.</p>
+      <div class="teh-portfolio">
+        <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+        <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+        <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+      </div>
+    </div>
+    <img class="portfolio-icon" src="./images/portfolio/dashboard.svg" alt="Admin Dashboard">
+  </div>
+  <div class="modal-project-bottom">
+    <div class="modal-project-images">
+      <div class="modal-image-block">
+        <img src="./images/portfolio/dashb.png" alt="Dashboard Screenshot">
+      </div>
+    </div>
+  </div>
+</div>
+
+        `;
+        break;
         case "3":
           content = `
             <div class="modal-project">
