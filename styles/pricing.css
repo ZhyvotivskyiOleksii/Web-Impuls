@@ -159,7 +159,7 @@
   width: 200%;
   height: 200%;
   background: rgba(255, 255, 255, 0.4);
-  transform: rotate(30deg);
+  transform: rotate(55deg);
   transition: 0.7s ease-in-out;
   opacity: 0;
 }

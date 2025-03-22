@@ -70,6 +70,7 @@
   will-change: transform;
   overflow: hidden;
   position: relative;
+  margin-bottom: 10px;
 }
 
 /* Додаємо відблиск */
@@ -81,7 +82,7 @@
   width: 250%;
   height: 250%;
   background: rgba(255, 255, 255, 0.3);
-  transform: rotate(30deg);
+  transform: rotate(45deg);
   transition: 0.7s ease-in-out;
   opacity: 0;
 }
@@ -192,7 +193,9 @@
     background-position: right;
     background-size: 50%;
   }
-
+  .hero-button {
+    margin-bottom: 0;
+  }
   .hero-container {
     align-items: center;
     justify-content: space-between;
