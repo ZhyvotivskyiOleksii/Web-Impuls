@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -19,7 +21,7 @@ header {
 /* Отключение скролла при открытом мобильном меню */
 html.no-scroll,
 body.no-scroll {
-  overflow: hidden !important; 
+  overflow: hidden !important;
   height: 100vh;
 }
 
@@ -28,7 +30,7 @@ body.no-scroll {
 }
 
 .logo-header-white {
-  width:  90px;
+  width: 90px;
   height: auto;
 }
 
@@ -108,7 +110,7 @@ body.no-scroll {
   width: 80px;
   height: 38px;
   padding: 9px 6px;
-  background-color: #4a90e2; 
+  background-color: #4a90e2;
   border-radius: 14px;
   cursor: pointer;
   overflow: hidden;
@@ -116,21 +118,21 @@ body.no-scroll {
 }
 
 .theme-toggle.dark {
-  background-color: #1a1a1a; 
+  background-color: #1a1a1a;
 }
 
 .theme-slider {
   position: absolute;
   top: 0px;
-  left: 0px; 
+  left: 0px;
   width: 40px;
-  height: 38px;
+  height: 40px;
   background-color: #f57804;
   border-radius: 14px;
   transition: left 0.3s ease;
 }
 .theme-toggle.dark .theme-slider {
-  left: 33px; 
+  left: 33px;
 }
 
 .theme-icon {
@@ -267,25 +269,24 @@ body.no-scroll {
   height: 30px;
 }
 
-
 .mobile-mini-header {
   position: fixed;
-  bottom: 160px; 
-  right: 0;     
-  background-color: #33333f; 
+  bottom: 160px;
+  right: 0;
+  background-color: #33333f;
   padding: 10px 10px;
-  border-top-left-radius: 30px; 
-  border-bottom-left-radius: 30px; 
-  border-left: 5px solid #0056b3; 
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-left: 5px solid #0056b3;
   display: flex;
   align-items: center;
-  gap: 15px; 
-  z-index: 99999; 
+  gap: 15px;
+  z-index: 99999;
 }
 
 .mobile-menu .mobile-mini-header .mobile-right-content {
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   gap: 15px;
 }
@@ -359,11 +360,11 @@ body.no-scroll {
     display: none;
   }
   .logo-header-white {
-    width:  150px;
+    width: 150px;
     height: auto;
   }
   .theme-toggle.dark .theme-slider {
-    left: 40px; 
+    left: 40px;
   }
   .cent-head {
     display: flex;
@@ -387,9 +388,9 @@ body.no-scroll {
     display: block;
   }
   .mobile-mini-header {
-    flex-direction: row; 
-    width: auto; 
-    justify-content: flex-start; 
+    flex-direction: row;
+    width: auto;
+    justify-content: flex-start;
   }
   .mobile-mini-header .social-icon img {
     width: 25px;
@@ -399,11 +400,10 @@ body.no-scroll {
     padding: 4px;
   }
   .mobile-mini-header .theme-toggle {
-  
     height: 30px;
   }
   .mobile-mini-header .theme-toggle .theme-slider {
-    width: 35px;
+    width: 30px;
     height: 30px;
     border-radius: 14px;
   }
@@ -417,14 +417,14 @@ body.no-scroll {
     height: 25px;
   }
   .mobile-mini-header .language-select .selected-language {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
   .mobile-mini-header .language-select .selected-language-icon {
     font-size: 20px;
   }
 }
 
-body.dark-mode {  
+body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
@@ -439,16 +439,11 @@ body.dark-mode .header-menu-link::before {
 
 /* Цвет иконки пера в пункте Blog */
 .header-menu-link i {
-  margin-right: 4px; 
-  font-size: 1.2em; 
+  margin-right: 4px;
+  font-size: 1.2em;
   color: #ffffff; /* белая иконка */
 }
 
-
 .header-menu-link i {
-  color: rgb(254, 126, 6); 
+  color: rgb(254, 126, 6);
 }
-
-
-
-
