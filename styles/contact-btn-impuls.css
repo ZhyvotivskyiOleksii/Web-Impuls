@@ -28,7 +28,6 @@
   opacity: 0;
 }
 
-/* Главная кнопка с улучшенными импульсами */
 .multibutton__button {
   width: 50px;
   height: 50px;
@@ -48,7 +47,6 @@
   background: #0585ff;
 }
 
-/* Красивая анимация импульсов */
 @keyframes impulse {
   0% {
     box-shadow: 0 0 0 0 rgba(6, 111, 226, 0.7), 0 0 0 0 rgba(5, 133, 255, 0.5);
@@ -69,48 +67,43 @@
   z-index: 1;
 }
 
-/* Список кнопок */
+
 .multibutton__list {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: none;
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
   right: 0;
   bottom: 80px;
+  opacity: 0;
+  transition: opacity 0.1s ease; /* Укороченный переход для общего контейнера */
 }
 
 .multibutton.active .multibutton__list {
   opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  display: flex;
 }
 
-/* Элементы списка с круглыми иконками */
 .multibutton__item {
   margin: 8px 0;
-  transform: translateY(20px); /* Начальное положение — ниже */
+  transform: translateY(20px); 
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .multibutton.active .multibutton__item {
-  transform: translateY(0); /* Появление — вверх */
+  transform: translateY(0); 
   opacity: 1;
 }
 
-/* Обратная анимация при скрытии (сверху вниз) */
 .multibutton:not(.active) .multibutton__item {
-  transform: translateY(-20px); /* Скрытие — вверх */
+  transform: translateY(-20px); 
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
-/* Последовательная анимация появления снизу вверх */
 .multibutton.active .multibutton__item:nth-child(1) {
-  transition-delay: 0.4s; /* Последний появляется первым */
+  transition-delay: 0.4s; 
 }
 .multibutton.active .multibutton__item:nth-child(2) {
   transition-delay: 0.3s;
@@ -119,12 +112,12 @@
   transition-delay: 0.2s;
 }
 .multibutton.active .multibutton__item:nth-child(4) {
-  transition-delay: 0.1s; /* Первый в списке появляется последним */
+  transition-delay: 0.1s; 
 }
 
-/* Последовательная анимация скрытия сверху вниз */
+
 .multibutton:not(.active) .multibutton__item:nth-child(1) {
-  transition-delay: 0.1s; /* Первый скрывается первым */
+  transition-delay: 0.1s; 
 }
 .multibutton:not(.active) .multibutton__item:nth-child(2) {
   transition-delay: 0.2s;
@@ -133,10 +126,10 @@
   transition-delay: 0.3s;
 }
 .multibutton:not(.active) .multibutton__item:nth-child(4) {
-  transition-delay: 0.4s; /* Последний скрывается последним */
+  transition-delay: 0.4s; 
 }
 
-/* Стили для круглых иконок */
+
 .multibutton__item a {
   display: flex;
   align-items: center;
@@ -159,7 +152,7 @@
   border-radius: 50%;
 }
 
-/* Стили для Telegram */
+
 .chat-menu-item.telegram {
   background: #046fe2;
   border-radius: 50%;
