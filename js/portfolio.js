@@ -126,12 +126,12 @@ document.addEventListener("DOMContentLoaded", function () {
         <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
       </div>
     </div>
-    <img class="portfolio-icon" src="./images/portfolio/dashboard.svg" alt="Admin Dashboard">
+    <img class="portfolio-icon" src="./images/portfolio/dashbord.webp" alt="Admin Dashboard">
   </div>
   <div class="modal-project-bottom">
     <div class="modal-project-images">
       <div class="modal-image-block">
-        <img src="./images/portfolio/dashb.png" alt="Dashboard Screenshot">
+        <img src="./images/portfolio/dashbord.webp" alt="Dashboard Screenshot">
       </div>
     </div>
   </div>
@@ -141,29 +141,29 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
         case "3":
           content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <img src="images/kuho-devices.webp" alt="Kuho">
-              </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="images/kuho-devices.webp" alt="Image 1">
-                  </div>
-                  <div class="modal-image-block">
-                    <img src="images/kuho-devices.webp" alt="Image 2">
-                  </div>
-                  <div class="modal-image-block">
-                    <img src="images/kuho-devices.webp" alt="Image 3">
-                  </div>
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1> Montaż Demontaż Reklam Warszawa</h1>
+                <p>Prezentujemy stronę wykonaną dla firmy specjalizującej się w montażu i demontażu reklam w Warszawie. Strona oparta na HTML, CSS i JavaScript umożliwia klientowi łatwą aktualizację i edytowanie treści, gwarantując nowoczesny design oraz intuicyjną obsługę.</p>
+                 <div class="teh-portfolio">
+                <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
+                <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+             </div>
                 </div>
-                <div class="modal-project-description">
-                  <p>Описание проекта Kuho. Serwis blacharsko-lakierniczy.</p>
-                </div>
-              </div>
+              
+              <img class="portfolio-icon" src="./images/portfolio/kryptorynek-devices.webp" alt="Ol Servis">
             </div>
-          `;
-          break;
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/olservis.com.pl.png" alt="Image 1">
+                </div>
+              </div>
+          </div>
+        `;
+        break;
         default:
           content = `<h1>Проект ${projectId}</h1><p>Описание не найдено.</p>`;
       }
