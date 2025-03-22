@@ -71,19 +71,21 @@
 
 /* Список кнопок */
 .multibutton__list {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
   right: 0;
   bottom: 80px;
-  opacity: 0;
-  transition: opacity 0.1s ease; /* Укороченный переход для общего контейнера */
 }
 
 .multibutton.active .multibutton__list {
   opacity: 1;
-  display: flex;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 /* Элементы списка с круглыми иконками */
@@ -142,7 +144,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #fff;
+  background: #046fe2;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
@@ -159,7 +161,7 @@
 
 /* Стили для Telegram */
 .chat-menu-item.telegram {
-  background: #fff;
+  background: #046fe2;
   border-radius: 50%;
   width: 60px;
   height: 60px;
