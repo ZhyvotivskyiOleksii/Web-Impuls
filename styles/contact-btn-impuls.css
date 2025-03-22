@@ -67,43 +67,44 @@
   z-index: 1;
 }
 
-
 .multibutton__list {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
   right: 0;
   bottom: 80px;
-  opacity: 0;
-  transition: opacity 0.1s ease; /* Укороченный переход для общего контейнера */
 }
 
 .multibutton.active .multibutton__list {
   opacity: 1;
-  display: flex;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .multibutton__item {
   margin: 8px 0;
-  transform: translateY(20px); 
+  transform: translateY(20px);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .multibutton.active .multibutton__item {
-  transform: translateY(0); 
+  transform: translateY(0);
   opacity: 1;
 }
 
 .multibutton:not(.active) .multibutton__item {
-  transform: translateY(-20px); 
+  transform: translateY(-20px);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .multibutton.active .multibutton__item:nth-child(1) {
-  transition-delay: 0.4s; 
+  transition-delay: 0.4s;
 }
 .multibutton.active .multibutton__item:nth-child(2) {
   transition-delay: 0.3s;
@@ -112,12 +113,11 @@
   transition-delay: 0.2s;
 }
 .multibutton.active .multibutton__item:nth-child(4) {
-  transition-delay: 0.1s; 
+  transition-delay: 0.1s;
 }
 
-
 .multibutton:not(.active) .multibutton__item:nth-child(1) {
-  transition-delay: 0.1s; 
+  transition-delay: 0.1s;
 }
 .multibutton:not(.active) .multibutton__item:nth-child(2) {
   transition-delay: 0.2s;
@@ -126,9 +126,8 @@
   transition-delay: 0.3s;
 }
 .multibutton:not(.active) .multibutton__item:nth-child(4) {
-  transition-delay: 0.4s; 
+  transition-delay: 0.4s;
 }
-
 
 .multibutton__item a {
   display: flex;
@@ -151,7 +150,6 @@
   height: 40px;
   border-radius: 50%;
 }
-
 
 .chat-menu-item.telegram {
   background: #046fe2;
