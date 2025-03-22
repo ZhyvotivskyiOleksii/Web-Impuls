@@ -27,6 +27,7 @@
   display: flex;
   align-items: center;
   color: inherit;
+  transition: color 0.3s ease;
 }
 .footer a:hover {
   color: #228ff8;
@@ -112,7 +113,7 @@
     border-radius: 16px;
   }
   /* .info-footer:hover {
-    background-color: #767474;
+    border-color: #767474;
   } */
   .payment-footer {
     font-size: 16px;
