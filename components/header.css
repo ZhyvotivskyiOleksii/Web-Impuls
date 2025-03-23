@@ -18,7 +18,6 @@ header {
   z-index: 103;
 }
 
-/* Отключение скролла при открытом мобильном меню */
 html.no-scroll,
 body.no-scroll {
   overflow: hidden !important;
