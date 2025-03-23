@@ -6,10 +6,10 @@
   background: #079bfe;
   background-image: url(/images/contact/price.svg);
   background-repeat: no-repeat;
-  background-size: 220px;
+  background-size: 180px;
   background-position: top left;
   width: 100%;
-  height: auto;
+  height: 160px;
 }
 
 .price-title {
@@ -23,9 +23,7 @@
   font-family: "FuturaPT2", sans-serif;
 }
 
-.pricing-info {
-  padding: 60px 20px;
-}
+
 
 .pricing-info .container {
   max-width: 1200px;
