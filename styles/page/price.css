@@ -25,6 +25,7 @@
   flex-direction: column;
   text-align: center;
   gap: 20px;
+  padding-top: 60px;
 }
 
 .pricing-text {
@@ -32,29 +33,28 @@
 }
 
 .pricing-text h2 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #348dfc;
+  font-size: 0.85rem;
+  font-weight: bold;
+  font-family: "FuturaPT2", sans-serif;
+  color: #228ff8;
+  text-transform: uppercase;
   position: relative;
-  margin-bottom: 16px;
+  left: 3rem;
 }
 
-.pricing-text h2 span {
-  display: inline-block;
-  padding-left: 30px;
-  position: relative;
-}
-
-.pricing-text h2 span::before {
+.pricing-text h2::before {
   content: "";
-  width: 24px;
-  height: 2px;
-  background-color: #348dfc;
+  display: block;
+  width: 2.5rem;
+  height: 0.125rem;
+  background-color: #228ff8;
   position: absolute;
-  left: 0;
   top: 50%;
+  left: -3rem;
+
   transform: translateY(-50%);
 }
+
 
 .pricing-text p {
   font-size: 14px;
@@ -156,22 +156,30 @@
   position: relative;
 }
 
-.pricing-box h2 span {
-  display: inline-block;
-  padding-left: 30px;
+.pricing-content h2 {
+  font-size: 0.85rem;
+  font-weight: bold;
+  font-family: "FuturaPT2", sans-serif;
+  color: #228ff8;
+  text-transform: uppercase;
   position: relative;
+  left: 3rem;
 }
 
-.pricing-box h2 span::before {
+.pricing-content h2::before {
   content: "";
-  width: 24px;
-  height: 2px;
-  background-color: #348dfc;
+  display: block;
+  width: 2.5rem;
+  height: 0.125rem;
+  background-color: #228ff8;
   position: absolute;
-  left: 0;
   top: 50%;
+  left: -3rem;
+
   transform: translateY(-50%);
 }
+
+
 
 .pricing-content p {
   font-weight: 400;
