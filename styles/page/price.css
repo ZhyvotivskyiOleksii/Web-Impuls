@@ -1,7 +1,12 @@
-
-
 .price {
-  background: #079bfe url("/images/contact/price.svg") no-repeat top center / 100px;
+  background: linear-gradient(
+    180deg,
+    #1f86e9 0%,
+    #1e8ff8 18.23%,
+    #1e8ff8 81%,
+    #d4e8f7 100%,
+    #0d3885 100%
+  );
   width: 100%;
   height: auto;
   display: flex;
@@ -10,7 +15,13 @@
   text-align: center;
   padding: 40px 0 40px 0;
 }
-
+.head-img {
+  position: absolute;
+  left: 20px;
+  top: 15%;
+  width: 300px;
+  height: auto;
+}
 .price-title {
   padding-top: 40px;
   text-transform: uppercase;
@@ -55,7 +66,6 @@
   transform: translateY(-50%);
 }
 
-
 .pricing-text p {
   font-size: 14px;
   color: #222;
@@ -83,8 +93,8 @@
   border-radius: 20px;
   padding: 30px;
   background: #fff;
-  box-shadow: -4px -2px 12px rgba(255,255,255,0.8),
-              4px 2px 12px rgba(136,165,191,0.48);
+  box-shadow: -4px -2px 12px rgba(255, 255, 255, 0.8),
+    4px 2px 12px rgba(136, 165, 191, 0.48);
   margin-bottom: 40px;
 }
 
@@ -179,8 +189,6 @@
   transform: translateY(-50%);
 }
 
-
-
 .pricing-content p {
   font-weight: 400;
   font-size: 12px;
@@ -195,12 +203,17 @@
     background-size: 180px;
     background-position: top left;
     height: 160px;
+    margin-top: 50px;
+    padding: 186px 527px 186px 527px;
   }
 
   .price-title {
-    padding: 120px 15px;
-    font-size: 1.8rem;
-    margin-top: 60px;
+    font-family: "Futura", sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 130%;
+    text-align: center;
+    color: #fff;
   }
 
   .pricing-grid {
@@ -241,8 +254,8 @@
   .pricing-items {
     border-radius: 28px;
     padding: 24px;
-    box-shadow: -6px -2px 16px rgba(255,255,255,0.8),
-                6px 2px 16px rgba(136,165,191,0.48);
+    box-shadow: -6px -2px 16px rgba(255, 255, 255, 0.8),
+      6px 2px 16px rgba(136, 165, 191, 0.48);
     margin-bottom: 80px;
   }
 
