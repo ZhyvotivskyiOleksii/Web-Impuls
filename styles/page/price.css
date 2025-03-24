@@ -66,7 +66,7 @@
 }
 
 .pricing-text p {
-  font-size: 18px;
+  font-size: 16px;
   color: #222;
   margin-top: 10px;
   line-height: 1.6;
@@ -91,7 +91,7 @@
   margin-bottom: 80px;
 }
 .items-numbers {
-  font-family: "Poppins", sans-serif;
+  
   font-weight: 700;
   font-size: 20px;
   line-height: 150%;
@@ -100,7 +100,7 @@
   margin-top: 12px;
 }
 .items-headings {
-  font-family: "Poppins", sans-serif;
+  
   font-weight: 700;
   font-size: 16px;
   line-height: 150%;
@@ -108,7 +108,7 @@
   margin-bottom: 8px;
 }
 .items-text {
-  font-family: "Poppins", sans-serif;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
@@ -116,7 +116,7 @@
   margin-bottom: 16px;
 }
 .sect-heading {
-  font-family: "Poppins", sans-serif;
+
   font-weight: 600;
   font-size: 22px;
   line-height: 130%;
@@ -152,7 +152,7 @@
     gap: 56px;
   }
   .items-numbers {
-    font-family: "Poppins", sans-serif;
+    
     font-weight: 700;
     font-size: 36px;
     line-height: 150%;
@@ -166,7 +166,7 @@
     color: #0c0c0c;
   }
   .items-text {
-    font-family: "Poppins", sans-serif;
+    
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;

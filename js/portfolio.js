@@ -93,8 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="modal-project">
               <div class="modal-project-top">
                 <div class="site-about">
-                  <h1> Montaż Demontaż Reklam Warszawa</h1>
-                  <p>Prezentujemy stronę wykonaną dla firmy specjalizującej się w montażu i demontażu reklam w Warszawie. Strona oparta na HTML, CSS i JavaScript umożliwia klientowi łatwą aktualizację i edytowanie treści, gwarantując nowoczesny design oraz intuicyjną obsługę.</p>
+                  <h1>Design Business Unity </h1>
+                  <p>Design Business Unity — об’єднання українського бізнесу та молодого IT покоління, де стажери (розробники, дизайнери) за будь-який донат для ЗСУ створюють сайти (з підтримкою досвідчених менторів) для українського бізнесу, отримуючи реальний досвід та портфоліо для свого майбутнього працевлаштування.</p>
                    <div class="teh-portfolio">
                   <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
                   <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
@@ -102,12 +102,12 @@ document.addEventListener("DOMContentLoaded", function () {
                </div>
                   </div>
                 
-                <img class="portfolio-icon" src="./images/portfolio/OL-SERV.svg" alt="Ol Servis">
+                <img class="portfolio-icon" src="./images/portfolio/Mockup1.svg" alt="Ol Servis">
               </div>
               <div class="modal-project-bottom">
                 <div class="modal-project-images">
                   <div class="modal-image-block">
-                    <img src="./images/portfolio/olservis.com.pl.png" alt="Image 1">
+                    <img src="./images/portfolio/Desktop_DBU.png" alt="Image 1">
                   </div>
                 </div>
             </div>
@@ -118,20 +118,19 @@ document.addEventListener("DOMContentLoaded", function () {
      <div class="modal-project">
   <div class="modal-project-top">
     <div class="site-about">
-      <h1>Responsive Admin Dashboard</h1>
-      <p>This project showcases a modern, fully responsive admin dashboard designed to simplify data management and analytics. Built with HTML, CSS, and JavaScript, it allows easy customization, real-time updates, and intuitive navigation. The clean interface and well-structured layout ensure a user-friendly experience for administrators.</p>
+      <h1>Norway</h1>
       <div class="teh-portfolio">
         <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
         <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
         <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
       </div>
     </div>
-    <img class="portfolio-icon" src="./images/portfolio/dashbord.webp" alt="Admin Dashboard">
+    <img class="portfolio-icon" src="./images/portfolio/Mockup2.svg" alt="Admin Dashboard">
   </div>
   <div class="modal-project-bottom">
     <div class="modal-project-images">
       <div class="modal-image-block">
-        <img src="./images/portfolio/dashbord.webp" alt="Dashboard Screenshot">
+        <img src="./images/portfolio/Desktop_Norway.png" alt="Dashboard Screenshot">
       </div>
     </div>
   </div>
@@ -144,8 +143,8 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="modal-project">
             <div class="modal-project-top">
               <div class="site-about">
-                <h1> Montaż Demontaż Reklam Warszawa</h1>
-                <p>Prezentujemy stronę wykonaną dla firmy specjalizującej się w montażu i demontażu reklam w Warszawie. Strona oparta na HTML, CSS i JavaScript umożliwia klientowi łatwą aktualizację i edytowanie treści, gwarantując nowoczesny design oraz intuicyjną obsługę.</p>
+                <h1> Beauty Salon</h1>
+                <p>Салон красоты для настоящих ценителей ухода и стиля.</p>
                  <div class="teh-portfolio">
                 <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
                 <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
@@ -153,19 +152,191 @@ document.addEventListener("DOMContentLoaded", function () {
              </div>
                 </div>
               
-              <img class="portfolio-icon" src="./images/portfolio/kryptorynek-devices.webp" alt="Ol Servis">
+              <img class="portfolio-icon" src="./images/portfolio/Mockup3.svg" alt="Beauty Salon">
             </div>
             <div class="modal-project-bottom">
               <div class="modal-project-images">
                 <div class="modal-image-block">
-                  <img src="./images/portfolio/olservis.com.pl.png" alt="Image 1">
+                  <img src="./images/portfolio/Beauty-Salon.png" alt="Beauty Salon">
                 </div>
               </div>
           </div>
         `;
         break;
-        default:
-          content = `<h1>Проект ${projectId}</h1><p>Описание не найдено.</p>`;
+        case "4":
+          content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>ELITE AUTO</h1>
+                <p>Выберите свою мечту прямо сейчас!.</p>
+                 <div class="teh-portfolio">
+                <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
+                <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+             </div>
+                </div>
+              
+              <img class="portfolio-icon" src="./images/portfolio/Mockup4.svg" alt="ELITE AUTO">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desktop_Car.png" alt="ELITE AUTO">
+                </div>
+              </div>
+          </div>
+        `;
+        break;
+        case "5":
+          content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>CRYPTO-VISTA</h1>
+                <p>Trade, Invest, and Earn – All in One Crypto Ecosystem!.</p>
+                 <div class="teh-portfolio">
+                <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
+                <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+             </div>
+                </div>
+              
+              <img class="portfolio-icon" src="./images/portfolio/Mockup5.png" alt="CRYPTO-VISTA">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desktop_Crypto.png" alt="CRYPTO-VISTA">
+                </div>
+              </div>
+          </div>
+        `;
+        break;
+        case "6":
+          content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>EduFlow</h1>
+                <p>Rozpocznij swoją podróż edukacyjną online.</p>
+                 <div class="teh-portfolio">
+                <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
+                <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+             </div>
+                </div>
+              
+              <img class="portfolio-icon" src="./images/portfolio/Mockup6.png" alt="EduFlow">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desktop_Learn.png" alt="EduFlow">
+                </div>
+              </div>
+          </div>
+        `;
+        break;
+        case "7":
+          content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Barber</h1>
+                <p>Where Grooming Meets Style - Your Path to Timeless Elegance!.</p>
+                 <div class="teh-portfolio">
+                <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
+                <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+             </div>
+                </div>
+              
+              <img class="portfolio-icon" src="./images/portfolio/Mockup7.png" alt="EduFlow">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/1440.png" alt="EduFlow">
+                </div>
+              </div>
+          </div>
+        `;
+        break;
+        case "8":
+          content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>India Cafe</h1>
+                <p>The spot for authentic cuisine and great customer service.</p>
+                 <div class="teh-portfolio">
+                <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
+                <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+             </div>
+                </div>
+              
+              <img class="portfolio-icon" src="./images/portfolio/Mockup8.png" alt="India Cafe">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desctop_MainPage.png" alt="India Cafe">
+                </div>
+              </div>
+          </div>
+        `;
+        break;
+        case "9":
+          content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Barber </h1>
+                <p>Ми зробимо так, щоб ви завжди виглядали гарно та стильно!.</p>
+                 <div class="teh-portfolio">
+                <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
+                <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+             </div>
+                </div>
+              
+              <img class="portfolio-icon" src="./images/portfolio/Mockup9.png" alt="India Cafe">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/desctop-2variant.png" alt="India Cafe">
+                </div>
+              </div>
+          </div>
+        `;
+        break;
+        case "10":
+          content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Admin Panel</h1>
+                <p></p>
+                 <div class="teh-portfolio">
+                <img class="portfolio-teh-icon"  src="/images/services/html_5.svg" alt="HTML">
+                <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
+             </div>
+                </div>
+              
+              <img class="portfolio-icon" src="./images/portfolio/dashbord.webp"admin">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/dashb.png" alt="admin">
+                </div>
+              </div>
+          </div>
+        `;
       }
 
       openModal(content);
