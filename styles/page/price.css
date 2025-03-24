@@ -1,34 +1,22 @@
 .price {
-  background: linear-gradient(
-    180deg,
-    #1f86e9 0%,
-    #1e8ff8 18.23%,
-    #1e8ff8 81%,
-    #d4e8f7 100%,
-    #0d3885 100%
-  );
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 0 40px 0;
+    background: #079bfe url("/images/pricing-img/Illustration.svg");
+    background-repeat: no-repeat;
+    background-position: end;
+    background-size: 250px auto;
+    padding: 80px 0;
+    
 }
-.head-img {
-  position: absolute;
-  left: 20px;
-  top: 15%;
-  width: 300px;
-  height: auto;
-}
+
 .price-title {
-  padding-top: 40px;
+  position: relative;
+  font-family: "FuturaPT2", sans-serif;
+    font-weight: 800;
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0.06em;
   color: #fff;
-  margin: 0;
+  text-align: center;
+  top: 40px;
 }
 
 .pricing-grid {
@@ -115,14 +103,17 @@
 }
 
 .items-numbers {
-  font-weight: 700;
+  font-weight: 800;
+  font-family: "FuturaPT2", sans-serif;
   font-size: 20px;
   color: #228ff8;
   margin-bottom: 6px;
+  
 }
 
 .items-headings {
-  font-weight: 700;
+  font-weight: 800;
+  font-family: "FuturaPT2", sans-serif;
   font-size: 16px;
   color: #0c0c0c;
   margin-bottom: 4px;
@@ -199,20 +190,12 @@
 }
 
 @media (min-width: 768px) {
-  .price {
-    background-size: 180px;
-    background-position: top left;
-    height: 160px;
-    margin-top: 50px;
-    padding: 186px 527px 186px 527px;
-  }
-
+  
   .price-title {
-    font-family: "Futura", sans-serif;
-    font-weight: 700;
-    font-size: 80px;
+    font-family: "FuturaPT2", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
     line-height: 130%;
-    text-align: center;
     color: #fff;
   }
 
