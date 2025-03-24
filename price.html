@@ -335,6 +335,82 @@
 
       <!-- Оверлей успеха -->
       <div class="success-overlay" id="success-overlay">
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-content">
+          <!-- Блок изображения -->
+          <div class="contact-image">
+            <img 
+              src="./images/contact/Frame-1.svg" 
+              alt="Contact Illustration" 
+              data-translate-key="unique_contact_image_alt"
+            >
+          </div>
+          <!-- Блок формы -->
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="Ім’я та Прізвище" 
+                required 
+                data-translate-key="unique_contact_name_placeholder"
+              >
+            </div>
+    
+            <div class="form-group">
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Електронна пошта" 
+                required 
+                data-translate-key="unique_contact_email_placeholder"
+              >
+            </div>
+            
+            <div class="form-group phone-group">
+              <div class="custom-select" id="country-select" data-translate-key="unique_contact_country_code_placeholder">
+                <div class="selected-option" id="selected-option">
+                  <span id="selected-flag">🇺🇦</span>
+                  <span id="selected-code">+380</span>
+                </div>
+                <ul class="options-list" id="options-list"></ul>
+              </div>
+              <!-- Поле ввода телефона -->
+              <input 
+                type="text" 
+                name="phone" 
+                placeholder="Телефон" 
+                required 
+                data-translate-key="unique_contact_phone_placeholder"
+              >
+            </div>
+    
+            <div class="form-group">
+              <textarea 
+                name="message" 
+                rows="4" 
+                placeholder="Повідомлення" 
+                required 
+                data-translate-key="unique_contact_message_placeholder"
+              ></textarea>
+            </div>
+    
+            <button 
+              type="submit" 
+              class="submit-button" 
+              data-translate-key="unique_contact_submit_button"
+            >
+              Відправити
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+              
+              <!-- Оверлей успеха -->
+    <div class="success-overlay" id="success-overlay">
         <div class="success-content">
           <div class="checkmark-wrap">
             <i class="fas fa-check-circle checkmark-icon"></i>
