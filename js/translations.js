@@ -730,6 +730,42 @@ emailInvalid: "Please enter a valid email.",
     modal_value_examples_smb: "Website for a cafe, workshop, agency, or local brand.",
     modal_label_price_smb: "Price:",
     modal_value_price_smb: "From $700",
+    "price_illustration_alt": "Image labeled Price",
+    "price_page_about_title": "Price",
+    "price_title_site_cost": "How much does it cost to make a website",
+    "price_paragraph_site_cost": "The cost of website development depends on many factors. The prices listed in our table are not final and can change depending on the specific requirements and tasks you give us.",
+    "price_img_alt_site_cost": "Chart of development cost",
+
+    "price_title_factors": "Main factors affecting the cost",
+
+    "price_factors_number_1": "01.",
+    "price_factors_heading_1": "Type of website",
+    "price_factors_text_1": "A business card site, a corporate website, an online store, or an exclusive site — each has its own features and requirements for development.",
+
+    "price_factors_number_2": "02.",
+    "price_factors_heading_2": "Functionality",
+    "price_factors_text_2": "The more features and possibilities your site requires, the more time and resources are needed to create it.",
+
+    "price_factors_number_3": "03.",
+    "price_factors_heading_3": "Design",
+    "price_factors_text_3": "A unique and complex design requires more time to develop, which affects the final cost.",
+
+    "price_factors_number_4": "04.",
+    "price_factors_heading_4": "Integrations",
+    "price_factors_text_4": "Connecting additional services and integrations with other systems can also influence the price.",
+
+    "price_factors_number_5": "05.",
+    "price_factors_heading_5": "Deadline",
+    "price_factors_text_5": "If you need a website as quickly as possible, this may be reflected in the overall cost.",
+
+    "price_img_alt_flexibility": "Group Cena",
+    "price_heading_flexibility": "Pricing Flexibility",
+    "price_paragraph_flexibility": "We are always open to discussion and flexible in pricing. Our specialists will help you find the best option, taking your possibilities into account. You will receive an individual approach and professional execution of each project.",
+
+    "price_img_alt_approach": "Group2",
+    "price_heading_approach": "Our Approach",
+    "price_paragraph_approach": "We always focus on the needs of our clients and are ready to offer optimal solutions that match your budget capabilities. For example, for a small business, we can offer a template-based site that will cost less yet remain functional and appealing. If you need an exclusive website with a unique design and extended capabilities, the cost will be higher.",
+
     
   },
     ua: {
@@ -1329,6 +1365,42 @@ emailInvalid: "Будь ласка, введіть коректний email.",
     modal_value_examples_smb: "Сайт для кав’ярні, майстерні, агентства чи локального бренду.",
     modal_label_price_smb: "Ціна:",
     modal_value_price_smb: "Від $700",
+    "price_illustration_alt": "Зображення з написом Price",
+    "price_page_about_title": "Ціна",
+    "price_title_site_cost": "Скільки коштує зробити сайт",
+    "price_paragraph_site_cost": "Вартість розробки сайту залежить від багатьох факторів. Ціни, наведені в нашій таблиці, не є кінцевими і можуть змінюватись в залежності від конкретних вимог і завдань, які ви ставите перед нами.",
+    "price_img_alt_site_cost": "Графік вартості розробки",
+
+    "price_title_factors": "Основні фактори, що впливають на вартість",
+
+    "price_factors_number_1": "01.",
+    "price_factors_heading_1": "Тип сайту",
+    "price_factors_text_1": "Візитка, корпоративний сайт, інтернет-магазин, ексклюзивний сайт — кожен має свої особливості та вимоги для розробки.",
+
+    "price_factors_number_2": "02.",
+    "price_factors_heading_2": "Функціональність",
+    "price_factors_text_2": "Чим більше функцій та можливостей повинен мати ваш сайт, тим більше часу та ресурсів потрібно на його створення.",
+
+    "price_factors_number_3": "03.",
+    "price_factors_heading_3": "Дизайн",
+    "price_factors_text_3": "Унікальний та складний дизайн потребує більше часу на розробку, що впливає на кінцеву вартість.",
+
+    "price_factors_number_4": "04.",
+    "price_factors_heading_4": "Інтеграції",
+    "price_factors_text_4": "Підключення додаткових сервісів та інтеграцій з іншими системами також може вплинути на ціну.",
+
+    "price_factors_number_5": "05.",
+    "price_factors_heading_5": "Термін виконання",
+    "price_factors_text_5": "Якщо потрібен сайт у найкоротші терміни, це може відобразитися на вартості.",
+
+    "price_img_alt_flexibility": "Group Cena",
+    "price_heading_flexibility": "Гнучкість у ціноутворенні",
+    "price_paragraph_flexibility": "Ми завжди готові до обговорення та гнучкі в ціноутворенні. Наші фахівці допоможуть визначити найкращий варіант, враховуючи можливості. Ви отримаєте індивідуальний підхід та професійне виконання кожного проєкту.",
+
+    "price_img_alt_approach": "Group2",
+    "price_heading_approach": "Наш підхід",
+    "price_paragraph_approach": "Ми завжди орієнтуємося на потреби наших клієнтів і готові запропонувати оптимальні рішення, що відповідають вашим бюджетним можливостям. Наприклад, для невеликого бізнесу ми можемо запропонувати шаблонний сайт, який буде коштувати дешевше, але залишиться функціональним та привабливим. Якщо ж вам потрібен ексклюзивний сайт з унікальним дизайном та розширеними можливостями, вартість буде вищою.",
+
 
     },
     pl: {
@@ -1935,6 +2007,42 @@ modal_label_examples_smb: "Przykłady:",
 modal_value_examples_smb: "Strona dla kawiarni, warsztatu, agencji lub lokalnej marki.",
 modal_label_price_smb: "Cena:",
 modal_value_price_smb: "Od 700 USD",
+"price_illustration_alt": "Obrazek Price",
+"price_page_about_title": "Cena",
+"price_title_site_cost": "Ile kosztuje stworzenie strony",
+"price_paragraph_site_cost": "Koszt tworzenia strony zależy od wielu czynników. Ceny wymienione w naszej tabeli nie są ostateczne i mogą się zmieniać w zależności od konkretnych wymagań i zadań, które nam zlecisz.",
+"price_img_alt_site_cost": "Wykres kosztu tworzenia",
+
+"price_title_factors": "Główne czynniki wpływające na koszt",
+
+"price_factors_number_1": "01.",
+"price_factors_heading_1": "Rodzaj strony",
+"price_factors_text_1": "Strona wizytówka, strona korporacyjna, sklep internetowy czy ekskluzywna strona — każda z nich ma swoje cechy i wymagania dotyczące tworzenia.",
+
+"price_factors_number_2": "02.",
+"price_factors_heading_2": "Funkcjonalność",
+"price_factors_text_2": "Im więcej funkcji i możliwości musi mieć twoja strona, tym więcej czasu i zasobów potrzeba na jej stworzenie.",
+
+"price_factors_number_3": "03.",
+"price_factors_heading_3": "Projekt",
+"price_factors_text_3": "Unikalny i złożony projekt wymaga więcej czasu na opracowanie, co wpływa na końcowy koszt.",
+
+"price_factors_number_4": "04.",
+"price_factors_heading_4": "Integracje",
+"price_factors_text_4": "Podłączanie dodatkowych usług i integracje z innymi systemami również mogą wpłynąć na cenę.",
+
+"price_factors_number_5": "05.",
+"price_factors_heading_5": "Termin wykonania",
+"price_factors_text_5": "Jeśli potrzebujesz strony w jak najkrótszym czasie, może to mieć odzwierciedlenie w jej koszcie.",
+
+"price_img_alt_flexibility": "Group Cena",
+"price_heading_flexibility": "Elastyczność cenowa",
+"price_paragraph_flexibility": "Zawsze jesteśmy otwarci na dyskusję i elastyczni w wycenie. Nasi specjaliści pomogą ci wybrać najlepszą opcję, uwzględniając twoje możliwości. Otrzymasz indywidualne podejście i profesjonalną realizację każdego projektu.",
+
+"price_img_alt_approach": "Group2",
+"price_heading_approach": "Nasze podejście",
+"price_paragraph_approach": "Zawsze koncentrujemy się na potrzebach naszych klientów i jesteśmy gotowi zaoferować optymalne rozwiązania odpowiadające twoim możliwościom budżetowym. Na przykład dla małej firmy możemy zaproponować stronę opartą na szablonie, która będzie kosztować mniej, ale pozostanie funkcjonalna i atrakcyjna. Jeśli potrzebujesz ekskluzywnej strony z unikalnym projektem i rozszerzonymi możliwościami, koszt będzie wyższy.",
+
 
   }
   };
