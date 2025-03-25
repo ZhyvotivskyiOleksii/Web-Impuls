@@ -15,7 +15,42 @@
   max-width: 1200px;
   padding-top: 60px;
 }
-
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #228ff8; /* Колір лінії */
+  max-width: 40px; /* Довжина лінії */
+}
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Відстань між лінією та текстом */
+  margin-bottom: 16px;
+}
+.title-container-2 {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Відстань між лінією та текстом */
+  margin-bottom: 24px;
+}
+.duo-row {
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: left;
+}
+.duo-col-text h2 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+}
+.pricing-subtitle {
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-family: "FuturaPT2", sans-serif;
+  color: #228ff8;
+  text-transform: uppercase;
+  text-align: left;
+}
 .pricing-box,
 .pricing-box-2 {
   display: flex;
@@ -53,11 +88,9 @@
   font-family: "FuturaPT2", sans-serif;
   color: #228ff8;
   text-transform: uppercase;
-  position: relative;
-  left: 3rem;
 }
 
-.pricing-text h2::before {
+/* .pricing-text h2::before {
   content: "";
   display: block;
   width: 2.5rem;
@@ -68,7 +101,7 @@
   left: -3rem;
 
   transform: translateY(-50%);
-}
+} */
 
 .pricing-text p {
   font-size: 14px;
@@ -205,12 +238,44 @@
     line-height: 130%;
     color: #fff;
   }
+  .duo-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
   .pricing-grid {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
     text-align: left;
+  }
+  .pricing-subtitle {
+    font-size: 24px;
+  }
+  .items-numbers {
+    font-weight: 700;
+    font-family: "FuturaPT2", sans-serif;
+    font-size: 36px;
+    color: #228ff8;
+    margin-bottom: 6px;
+  }
+  .title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Відстань між лінією та текстом */
+    margin-bottom: 20px;
+  }
+  .title-container-2 {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Відстань між лінією та текстом */
+    margin-bottom: 80px;
+  }
+  .line {
+    max-width: 100px; /* Довжина лінії */
   }
   .pricing {
     width: 500px;
@@ -221,7 +286,6 @@
 
   .pricing-text h2 {
     font-size: 24px;
-    margin-bottom: 20px;
   }
 
   .pricing-text h2 span::before {
@@ -257,11 +321,6 @@
   .pricing-items li {
     max-width: 180px;
     text-align: left;
-  }
-
-  .items-numbers {
-    font-size: 20px;
-    margin-bottom: 6px;
   }
 
   .items-headings {
@@ -347,34 +406,9 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .duo-section {
   padding: 20px;
   background: #fff;
-}
-
-
-
-.duo-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
 }
 
 .duo-col-text {
@@ -382,11 +416,11 @@
 }
 
 .duo-col-text h2 {
-  font-size: 1rem;
-  font-weight: 700;
+  font-weight: bold;
+  font-family: "FuturaPT2", sans-serif;
   color: #228ff8;
-  margin-bottom: 10px;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .duo-col-text p {
@@ -432,7 +466,6 @@
 
   .duo-col-text h2 {
     font-size: 1.2rem;
-    margin-bottom: 15px;
   }
   .duo-col-text p {
     font-size: 1rem;

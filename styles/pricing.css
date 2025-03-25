@@ -3,18 +3,7 @@
   text-align: center;
 }
 
-.pricing-subtitle {
-  font-size: 0.875rem;
-  font-weight: bold;
-  font-family: "FuturaPT2", sans-serif;
-  color: #228ff8;
-  text-transform: uppercase;
-  position: relative;
-  left: 2rem;
-  text-align: left;
-  margin-bottom: 20px;
-}
-.pricing-subtitle::before {
+/* .pricing-subtitle::before {
   content: "";
   display: block;
   width: 2rem;
@@ -24,7 +13,7 @@
   top: 50%;
   left: -2.5rem;
   transform: translateY(-50%);
-}
+} */
 .pricing-title {
   font-size: 1.5rem;
   font-weight: 700;
