@@ -15,12 +15,7 @@
   max-width: 1200px;
   padding-top: 60px;
 }
-.info-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-}
+
 .pricing-box,
 .pricing-box-2 {
   display: flex;
@@ -286,7 +281,8 @@
 
   .pricing-box {
     flex-direction: row-reverse;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
     gap: 30px;
   }
 
