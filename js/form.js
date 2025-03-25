@@ -17,12 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function populateCountryList() {
     countries.forEach((country) => {
       const li = document.createElement("li");
-      li.innerHTML = `
-        <span>${country.flag}</span>
-        <span>${country.code}</span>
-      `;
+      li.innerHTML = `<span>${country.flag}</span><span>${country.code}</span>`;
       li.addEventListener("click", () => setSelectedCountry(country));
-      if (country.code === "+380") li.classList.add("selected");
       optionsList.appendChild(li);
     });
   }
@@ -42,8 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         const userCountry = countries.find((c) => c.name === data.country_name);
         if (userCountry) setSelectedCountry(userCountry);
+        else setSelectedCountry(countries.find((c) => c.code === "+380"));
       })
-      .catch((err) => console.warn("Не удалось определить страну пользователя", err));
+      .catch(() => setSelectedCountry(countries.find((c) => c.code === "+380")));
   }
 
   selectedOption.addEventListener("click", () => {
@@ -64,6 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const phoneField = contactForm.querySelector("[name='phone']");
     const nameField = contactForm.querySelector("[name='name']");
     const messageField = contactForm.querySelector("[name='message']");
+
     const email = emailField.value.trim();
     const phone = phoneField.value.trim();
     const name = nameField.value.trim();
@@ -76,12 +74,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!emailPattern.test(email)) {
       emailField.style.border = "2px solid red";
+      valid = false;
     } else {
       emailField.style.border = "";
     }
 
     if (!phonePattern.test(phone)) {
       phoneField.style.border = "2px solid red";
+      valid = false;
     } else {
       phoneField.style.border = "";
     }
@@ -100,12 +100,23 @@ document.addEventListener("DOMContentLoaded", function () {
       messageField.style.border = "";
     }
 
-    if (emailPattern.test(email) && phonePattern.test(phone) && name && message) {
+    if (valid) {
       const successOverlay = document.getElementById("success-overlay");
       successOverlay.classList.add("show");
-      setTimeout(() => successOverlay.classList.remove("show"), 3000);
+
+      // Скинути форми
       contactForm.reset();
-      setSelectedCountry(countries.find((c) => c.code === "+380"));
+
+      // Скинути стилі полів
+      [emailField, phoneField, nameField, messageField].forEach((field) => {
+        field.style.border = "";
+      });
+
+      // Скинути код країни до автоопреділеного
+      detectCountryByIP();
+
+      // Ховати оверлей через 3с
+      setTimeout(() => successOverlay.classList.remove("show"), 3000);
     }
   });
 

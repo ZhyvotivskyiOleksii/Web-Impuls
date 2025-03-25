@@ -523,132 +523,149 @@
 
 
 
-
-
-
-
-
-
-      <section class="contact-section">
-       
-        <div class="container">
-          
-          <h3 data-translate-key="contact_heading_form">
-            Будь ласка, скористайтеся формою, щоб звʼязатися з нами
-          </h3>
-          <p data-translate-key="contact_paragraph_form">
-            Введіть своє імʼя, адресу електронної пошти, номер телефону та повідомлення, і ми незабаром звʼяжемося з вами.
-          </p>
-          <div class="contact-content">
-            
-            <div class="contact-image">
-              <img src="/images/contact/Frame-1.svg" alt="Contact Illustration"
-                data-translate-key="unique_contact_image_alt" />
-            </div>
-   
-            <form class="contact-form" id="contact-form">
-              <div class="form-group">
-                <input type="text" name="name" placeholder="Ім’я та Прізвище" required
-                  data-translate-key="unique_contact_name_placeholder" />
-              </div>
-
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Електронна пошта" required
-                  data-translate-key="unique_contact_email_placeholder" />
-              </div>
-
-        
-              <div class="form-group phone-group">
            
-                <div class="custom-select" id="country-select"
-                  data-translate-key="unique_contact_country_code_placeholder">
-                  <div class="selected-option" id="selected-option">
-              
-                    <span id="selected-flag">🇺🇦</span>
-                    <span id="selected-code">+380</span>
+
+
+            <section class="contact-section">
+              <div class="container">
+                <h3 data-translate-key="contact_heading_form">
+                  Будь ласка, скористайтеся формою, щоб звʼязатися з нами
+                </h3>
+                <p data-translate-key="contact_paragraph_form">
+                  Введіть своє імʼя, адресу електронної пошти, номер телефону та повідомлення, і ми незабаром звʼяжемося з вами.
+                </p>
+                <div class="contact-content">
+                  <!-- Блок изображения -->
+                  <div class="contact-image">
+                    <img 
+                      src="/images/contact/Frame-1.svg" 
+                      alt="Contact Illustration" 
+                      data-translate-key="unique_contact_image_alt"
+                    >
                   </div>
-                  <ul class="options-list" id="options-list"></ul>
-                </div>
-            
-                <input type="text" name="phone" placeholder="Телефон" required
-                  data-translate-key="unique_contact_phone_placeholder" />
-              </div>
-
-              <div class="form-group">
-                <textarea name="message" rows="4" placeholder="Повідомлення" required
-                  data-translate-key="unique_contact_message_placeholder"></textarea>
-              </div>
-
-              <button type="submit" class="submit-button" data-translate-key="unique_contact_submit_button">
-                Відправити
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-     
-      <div class="success-overlay" id="success-overlay">
-        <section class="contact-section">
-          <div class="container">
-            <div class="contact-content">
-           
-              <div class="contact-image">
-                <img src="./images/contact/Frame-1.svg" alt="Contact Illustration"
-                  data-translate-key="unique_contact_image_alt">
-              </div>
-             
-              <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                  <input type="text" name="name" placeholder="Ім’я та Прізвище" required
-                    data-translate-key="unique_contact_name_placeholder">
-                </div>
-
-                <div class="form-group">
-                  <input type="email" name="email" placeholder="Електронна пошта" required
-                    data-translate-key="unique_contact_email_placeholder">
-                </div>
-
-                <div class="form-group phone-group">
-                  <div class="custom-select" id="country-select"
-                    data-translate-key="unique_contact_country_code_placeholder">
-                    <div class="selected-option" id="selected-option">
-                      <span id="selected-flag">🇺🇦</span>
-                      <span id="selected-code">+380</span>
+                  <!-- Блок формы -->
+                  <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                      <input 
+                        type="text" 
+                        name="name" 
+                        placeholder="Ім’я та Прізвище" 
+                        required 
+                        data-translate-key="unique_contact_name_placeholder"
+                      >
                     </div>
-                    <ul class="options-list" id="options-list"></ul>
+            
+                    <div class="form-group">
+                      <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Електронна пошта" 
+                        required 
+                        data-translate-key="unique_contact_email_placeholder"
+                      >
+                    </div>
+                    
+                    <!-- Поле выбора кода страны и телефон в одной строке -->
+                    <div class="form-group phone-group">
+                      <!-- Кастомный dropdown (код страны) -->
+                      <div class="custom-select" id="country-select" data-translate-key="unique_contact_country_code_placeholder">
+                        <div class="selected-option" id="selected-option">
+                          <!-- Значение по умолчанию -->
+                          <span id="selected-flag">🇺🇦</span>
+                          <span id="selected-code">+380</span>
+                        </div>
+                        <ul class="options-list" id="options-list"></ul>
+                      </div>
+                      <!-- Поле ввода телефона -->
+                      <input 
+                        type="text" 
+                        name="phone" 
+                        placeholder="Телефон" 
+                        required 
+                        data-translate-key="unique_contact_phone_placeholder"
+                      >
+                    </div>
+            
+                    <div class="form-group">
+                      <textarea 
+                        name="message" 
+                        rows="4" 
+                        placeholder="Повідомлення" 
+                        required 
+                        data-translate-key="unique_contact_message_placeholder"
+                      ></textarea>
+                    </div>
+            
+                    <button 
+                      type="submit" 
+                      class="submit-button" 
+                      data-translate-key="unique_contact_submit_button"
+                    >
+                      Відправити
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </section>
+            
+                      
+                      <!-- Оверлей успеха -->
+            <div class="success-overlay" id="success-overlay">
+                <div class="success-content">
+                  <div class="checkmark-wrap">
+                    <i class="fas fa-check-circle checkmark-icon"></i>
                   </div>
-               
-                  <input type="text" name="phone" placeholder="Телефон" required
-                    data-translate-key="unique_contact_phone_placeholder">
+                  <p class="success-message" data-translate-key="success_message_text">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</p>
                 </div>
-
-                <div class="form-group">
-                  <textarea name="message" rows="4" placeholder="Повідомлення" required
-                    data-translate-key="unique_contact_message_placeholder"></textarea>
-                </div>
-
-                <button type="submit" class="submit-button" data-translate-key="unique_contact_submit_button">
-                  Відправити
-                </button>
-              </form>
-            </div>
-          </div>
-        </section>
+              </div>
 
 
-     
-        <div class="success-overlay" id="success-overlay">
-          <div class="success-content">
-            <div class="checkmark-wrap">
-              <i class="fas fa-check-circle checkmark-icon"></i>
-            </div>
-            <p class="success-message" data-translate-key="success_message_text">
-              Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
-            </p>
-          </div>
-        </div>
+      
     </main>
+
+
+
+
+<!-- Модальное окно -->
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <button class="modal-close" id="modal-close-btn">×</button>
+    <div class="modal-logo-wrap">
+      <img src="/images/img/logo-1.png" alt="Logo" class="modal-logo" loading="lazy">
+    </div>
+    <h2 class="modal-title" data-translate-key="modal_title">Оставьте заявку</h2>
+    <p class="modal-description" data-translate-key="modal_description">Мы свяжемся с вами в ближайшее время для обсуждения деталей проекта.</p>
+    <form class="modal-form" id="modal-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Имя" required data-translate-key="modal_input_name_placeholder">
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required data-translate-key="modal_input_email_placeholder">
+      </div>
+      <div class="form-group">
+        <input type="text" name="phone" placeholder="Телефон" required data-translate-key="modal_input_phone_placeholder">
+      </div>
+      <div class="form-group">
+        <textarea name="message" rows="4" placeholder="Сообщение" required data-translate-key="modal_textarea_message_placeholder"></textarea>
+      </div>
+      <button type="submit" class="submit-button" data-translate-key="modal_submit_button">Отправить</button>
+    </form>
+  </div>
+</div>
+
+<!-- Оверлей успеха -->
+<div class="success-overlay" id="success-overlay">
+  <div class="success-content">
+    <div class="checkmark-wrap">
+      <i class="fas fa-check-circle checkmark-icon"></i>
+    </div>
+    <p class="success-message" data-translate-key="success_message_text">Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.</p>
+  </div>
+</div>
+
+
+
+
 
     <!-- ============form-modal============= -->
 
