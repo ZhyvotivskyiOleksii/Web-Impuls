@@ -767,7 +767,12 @@ emailInvalid: "Please enter a valid email.",
     "price_paragraph_approach": "We always focus on the needs of our clients and are ready to offer optimal solutions that match your budget capabilities. For example, for a small business, we can offer a template-based site that will cost less yet remain functional and appealing. If you need an exclusive website with a unique design and extended capabilities, the cost will be higher.",
     contact_heading_form: "Please use the form to get in touch with us",
     contact_paragraph_form: "Enter your name, email address, phone number, and message, and we will contact you shortly",
-    
+    seo_heading: "Website Development: Prices, Stages, Benefits",
+seo_paragraph_1: "Our web studio Web Impuls offers professional full-cycle website development services of any complexity. Whether you need a landing page, corporate website, or an online store — we guarantee quality, responsiveness, and effectiveness.",
+seo_paragraph_2: "The cost of website development depends on the type, functionality, custom design, and implementation time. We always provide transparent pricing and work with clients from all over the world, including Ukraine, Poland, Germany, and the USA.",
+seo_paragraph_3: "Our services include SEO optimization, UX/UI design, CRM integration, analytics setup, and digital marketing. If you are looking for a reliable web development studio — choose Web Impuls.",
+seo_paragraph_4: "Find out how much a website costs, what technologies we use, and how exactly we can help your business reach a new level of online presence.",
+
     
   },
     ua: {
@@ -1404,7 +1409,13 @@ emailInvalid: "Будь ласка, введіть коректний email.",
     "price_paragraph_approach": "Ми завжди орієнтуємося на потреби наших клієнтів і готові запропонувати оптимальні рішення, що відповідають вашим бюджетним можливостям. Наприклад, для невеликого бізнесу ми можемо запропонувати шаблонний сайт, який буде коштувати дешевше, але залишиться функціональним та привабливим. Якщо ж вам потрібен ексклюзивний сайт з унікальним дизайном та розширеними можливостями, вартість буде вищою.",
     contact_heading_form: "Будь ласка, скористайтеся формою, щоб звʼязатися з нами",
     contact_paragraph_form: "Введіть своє імʼя, адресу електронної пошти, номер телефону та повідомлення, і ми незабаром звʼяжемося з вами",
-    
+    seo_heading: "Розробка сайтів: Ціни, Етапи, Переваги",
+seo_paragraph_1: "Наша вебстудія Web Impuls пропонує професійні послуги з створення сайтів під ключ будь-якої складності. Незалежно від того, чи потрібен вам лендінг пейдж, корпоративний сайт або інтернет-магазин — ми гарантуємо якість, адаптивність та ефективність кожного рішення.",
+seo_paragraph_2: "Вартість створення сайту залежить від типу, функціоналу, унікального дизайну та термінів реалізації. Ми завжди надаємо прозору цінову політику і працюємо з клієнтами з усього світу, включаючи Україну, Польщу, Німеччину та США.",
+seo_paragraph_3: "Наші послуги включають SEO-оптимізацію, UX/UI-дизайн, інтеграцію з CRM, налаштування аналітики та маркетинг. Якщо ви шукаєте надійну студію веброзробки — обирайте Web Impuls.",
+seo_paragraph_4: "Дізнайтесь, скільки коштує сайт, які технології ми використовуємо, і як саме ми можемо допомогти вашому бізнесу вийти на новий рівень онлайн-присутності.",
+
+
 
     },
     pl: {
@@ -2049,6 +2060,12 @@ modal_value_price_smb: "Od 700 USD",
 
 contact_heading_form: "Proszę skorzystać z formularza, aby się z nami skontaktować",
 contact_paragraph_form: "Wpisz swoje imię, adres e-mail, numer telefonu i wiadomość, a wkrótce się z Tobą skontaktujemy",
+seo_heading: "Tworzenie stron internetowych: Ceny, Etapy, Korzyści",
+seo_paragraph_1: "Nasze studio Web Impuls oferuje profesjonalne usługi tworzenia stron internetowych pod klucz o dowolnym poziomie złożoności. Niezależnie od tego, czy potrzebujesz landing page, strony firmowej czy sklepu internetowego — gwarantujemy jakość, responsywność i skuteczność.",
+seo_paragraph_2: "Koszt stworzenia strony zależy od jej rodzaju, funkcjonalności, unikalnego designu i terminu realizacji. Zawsze oferujemy przejrzystą politykę cenową i współpracujemy z klientami z całego świata, w tym z Ukrainy, Polski, Niemiec i USA.",
+seo_paragraph_3: "Nasze usługi obejmują optymalizację SEO, projektowanie UX/UI, integrację z CRM, konfigurację analityki i marketing cyfrowy. Jeśli szukasz niezawodnego studia tworzenia stron internetowych — wybierz Web Impuls.",
+seo_paragraph_4: "Dowiedz się, ile kosztuje strona internetowa, jakich technologii używamy i w jaki sposób możemy pomóc Twojej firmie osiągnąć nowy poziom obecności w sieci.",
+
 
   }
   };

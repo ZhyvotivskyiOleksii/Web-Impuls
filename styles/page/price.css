@@ -485,3 +485,55 @@
   color: #228ff8;
   text-transform: uppercase;
 }
+
+
+
+.seo-text-section {
+  padding: 40px 20px;
+
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.seo-text-section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.seo-text-section p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+
+
+@media (min-width: 768px) {
+  .seo-text-section h2 {
+    font-size: 26px;
+  }
+
+  .seo-text-section p {
+    font-size: 17px;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .seo-text-section {
+    padding: 60px 40px;
+  }
+
+  .seo-text-section h2 {
+    font-size: 30px;
+  }
+
+  .seo-text-section p {
+    font-size: 18px;
+  }
+}
