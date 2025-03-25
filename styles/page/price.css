@@ -18,19 +18,19 @@
 .line {
   flex-grow: 1;
   height: 2px;
-  background-color: #228ff8; 
-  max-width: 40px; 
+  background-color: #228ff8;
+  max-width: 40px;
 }
 .title-container {
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
   margin-bottom: 16px;
 }
 .title-container-2 {
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
   margin-bottom: 24px;
 }
 .duo-row {
@@ -472,13 +472,7 @@
   }
 }
 
-
-.contact-section  h3, p{
-  text-align: left;
-
-}
-
-.contact-section  h3 {
+.contact-section h3 {
   text-align: left;
   font-weight: bold;
   font-family: "FuturaPT2", sans-serif;
@@ -486,13 +480,11 @@
   text-transform: uppercase;
 }
 
-
-
 .seo-text-section {
   padding: 40px 20px;
 
   color: #333;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
 }
 
@@ -512,7 +504,6 @@
   text-align: justify;
 }
 
-
 @media (min-width: 768px) {
   .seo-text-section h2 {
     font-size: 26px;
@@ -522,7 +513,6 @@
     font-size: 17px;
   }
 }
-
 
 @media (min-width: 1024px) {
   .seo-text-section {
