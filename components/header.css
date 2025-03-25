@@ -232,7 +232,10 @@ body.no-scroll {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  background: 
+  url('/images/img/slider_v1_bg_shape.png') no-repeat center/cover,
+  #ffffff;
+
   padding: 80px 20px 100px 20px;
   z-index: 102;
   transform: translateY(-100%);
@@ -439,11 +442,10 @@ body.dark-mode .header-menu-link::before {
   background-color: #ffffff;
 }
 
-/* Цвет иконки пера в пункте Blog */
 .header-menu-link i {
   margin-right: 4px;
   font-size: 1.2em;
-  color: #ffffff; /* белая иконка */
+  color: #ffffff; 
 }
 
 .header-menu-link i {
