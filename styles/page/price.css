@@ -175,7 +175,7 @@
   background-color: #228ff8;
   position: absolute;
   top: 50%;
-  left: -3rem;
+  left: 1rem;
 
   transform: translateY(-50%);
 }
