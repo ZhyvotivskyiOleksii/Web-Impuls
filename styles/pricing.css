@@ -34,7 +34,7 @@
   max-width: 250px;
   text-align: center;
   overflow: visible;
-  flex: 1 1 calc(33.333% - 20px); /* Для трёх карточек в ряду */
+  flex: 1 1 calc(33.333% - 20px); 
   min-width: 240px;
   transition: transform 0.3s ease-in-out;
 }

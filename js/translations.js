@@ -765,7 +765,9 @@ emailInvalid: "Please enter a valid email.",
     "price_img_alt_approach": "Group2",
     "price_heading_approach": "Our Approach",
     "price_paragraph_approach": "We always focus on the needs of our clients and are ready to offer optimal solutions that match your budget capabilities. For example, for a small business, we can offer a template-based site that will cost less yet remain functional and appealing. If you need an exclusive website with a unique design and extended capabilities, the cost will be higher.",
-
+    contact_heading_form: "Please use the form to get in touch with us",
+    contact_paragraph_form: "Enter your name, email address, phone number, and message, and we will contact you shortly",
+    
     
   },
     ua: {
@@ -1400,7 +1402,9 @@ emailInvalid: "Будь ласка, введіть коректний email.",
     "price_img_alt_approach": "Group2",
     "price_heading_approach": "Наш підхід",
     "price_paragraph_approach": "Ми завжди орієнтуємося на потреби наших клієнтів і готові запропонувати оптимальні рішення, що відповідають вашим бюджетним можливостям. Наприклад, для невеликого бізнесу ми можемо запропонувати шаблонний сайт, який буде коштувати дешевше, але залишиться функціональним та привабливим. Якщо ж вам потрібен ексклюзивний сайт з унікальним дизайном та розширеними можливостями, вартість буде вищою.",
-
+    contact_heading_form: "Будь ласка, скористайтеся формою, щоб звʼязатися з нами",
+    contact_paragraph_form: "Введіть своє імʼя, адресу електронної пошти, номер телефону та повідомлення, і ми незабаром звʼяжемося з вами",
+    
 
     },
     pl: {
@@ -2043,6 +2047,8 @@ modal_value_price_smb: "Od 700 USD",
 "price_heading_approach": "Nasze podejście",
 "price_paragraph_approach": "Zawsze koncentrujemy się na potrzebach naszych klientów i jesteśmy gotowi zaoferować optymalne rozwiązania odpowiadające twoim możliwościom budżetowym. Na przykład dla małej firmy możemy zaproponować stronę opartą na szablonie, która będzie kosztować mniej, ale pozostanie funkcjonalna i atrakcyjna. Jeśli potrzebujesz ekskluzywnej strony z unikalnym projektem i rozszerzonymi możliwościami, koszt będzie wyższy.",
 
+contact_heading_form: "Proszę skorzystać z formularza, aby się z nami skontaktować",
+contact_paragraph_form: "Wpisz swoje imię, adres e-mail, numer telefonu i wiadomość, a wkrótce się z Tobą skontaktujemy",
 
   }
   };

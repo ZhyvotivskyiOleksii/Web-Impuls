@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       document.getElementById("header-placeholder").innerHTML = data;
 
-      // Вызов функций после загрузки header
+
       initializeBurgerMenu();
       initializeThemeToggle();
       initializeLanguageSelect();

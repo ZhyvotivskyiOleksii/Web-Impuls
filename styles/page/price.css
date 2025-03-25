@@ -18,19 +18,19 @@
 .line {
   flex-grow: 1;
   height: 2px;
-  background-color: #228ff8; /* Колір лінії */
-  max-width: 40px; /* Довжина лінії */
+  background-color: #228ff8; 
+  max-width: 40px; 
 }
 .title-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Відстань між лінією та текстом */
+  gap: 10px; 
   margin-bottom: 16px;
 }
 .title-container-2 {
   display: flex;
   align-items: center;
-  gap: 10px; /* Відстань між лінією та текстом */
+  gap: 10px; 
   margin-bottom: 24px;
 }
 .duo-row {
@@ -470,4 +470,18 @@
   .duo-col-text p {
     font-size: 1rem;
   }
+}
+
+
+.contact-section  h3, p{
+  text-align: left;
+
+}
+
+.contact-section  h3 {
+  text-align: left;
+  font-weight: bold;
+  font-family: "FuturaPT2", sans-serif;
+  color: #228ff8;
+  text-transform: uppercase;
 }
