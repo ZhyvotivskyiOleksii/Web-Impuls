@@ -35,16 +35,6 @@
   max-width: 100%;
 }
 
-.pricing-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 60px;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding-top: 60px;
-}
-
 .pricing-card {
   position: relative;
   background: #fff;

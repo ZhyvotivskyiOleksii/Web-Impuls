@@ -1,16 +1,37 @@
 .price {
-    background: #079bfe url("/images/pricing-img/Illustration.svg");
-    background-repeat: no-repeat;
-    background-position: end;
-    background-size: 250px auto;
-    padding: 80px 0;
-    
+  background: #079bfe url("/images/pricing-img/Illustration.svg");
+  background-repeat: no-repeat;
+  background-position: end;
+  background-size: 250px auto;
+  padding: 80px 0;
 }
-
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 60px;
+  column-gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 60px;
+}
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+.pricing-box,
+.pricing-box-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 .price-title {
   position: relative;
   font-family: "FuturaPT2", sans-serif;
-    font-weight: 800;
+  font-weight: 800;
   text-transform: uppercase;
   font-size: 1.5rem;
   letter-spacing: 0.06em;
@@ -108,7 +129,6 @@
   font-size: 20px;
   color: #228ff8;
   margin-bottom: 6px;
-  
 }
 
 .items-headings {
@@ -131,13 +151,6 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-
-.pricing-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
 }
 
 .pricing-img {
@@ -190,7 +203,6 @@
 }
 
 @media (min-width: 768px) {
-  
   .price-title {
     font-family: "FuturaPT2", sans-serif;
     font-weight: 800;
@@ -198,7 +210,6 @@
     line-height: 130%;
     color: #fff;
   }
-
   .pricing-grid {
     flex-direction: row;
     align-items: center;
@@ -206,7 +217,9 @@
     gap: 40px;
     text-align: left;
   }
-
+  .pricing {
+    width: 500px;
+  }
   .pricing-text {
     flex: 1 1 50%;
   }
@@ -272,11 +285,16 @@
   }
 
   .pricing-box {
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     gap: 30px;
   }
 
+  .pricing-box-2 {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
   .pricing-img {
     width: 300px;
     margin-right: 20px;
@@ -286,12 +304,14 @@
     text-align: left;
   }
 
-  .pricing-box h2 {
+  .pricing-box h2,
+  .pricing-box-2 h2 {
     font-size: 24px;
     margin-bottom: 20px;
   }
 
-  .pricing-box h2 span::before {
+  .pricing-box h2 span,
+  .pricing-box-2 h2 span::before {
     width: 40px;
   }
 
