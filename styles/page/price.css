@@ -44,7 +44,7 @@
   line-height: 150%;
 }
 .pricing-subtitle {
-  font-size: 0.875rem;
+  font-size: 18px;
   font-weight: bold;
   font-family: "FuturaPT2", sans-serif;
   color: #228ff8;
@@ -253,7 +253,7 @@
     text-align: left;
   }
   .pricing-subtitle {
-    font-size: 24px;
+    font-size: 20px;
   }
   .items-numbers {
     font-weight: 700;

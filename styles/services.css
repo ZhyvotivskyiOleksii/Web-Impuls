@@ -29,9 +29,10 @@
 
 .services-title {
   text-align: start;
-  font-size: 1.55rem;
+  font-size: 20px;
   font-weight: 800;
   margin-bottom: 15px;
+ 
 
   color: #2e363e;
   font-family: "FuturaPT2", sans-serif;
@@ -273,7 +274,9 @@
   }
 
   .services-title {
-    font-size: 1.8rem;
+    font-size: 20px;
+    
+
   }
 
   .services-description {
@@ -294,12 +297,12 @@
 /* ========== Мобильная версия (430px) ========== */
 @media  (max-width: 430px) {
   .services-title {
-    font-size: 1.6rem;
+    font-size: 20px;
     line-height: 1.2;
   }
 
   .services-description {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.4;
   }
 
