@@ -101,6 +101,7 @@ body {
 
 
 
+
   /* Общие стили для всех текстовых полей */
 input[type="text"],
 textarea {
@@ -112,22 +113,23 @@ textarea {
   border-radius: 5px; /* Скругленные углы */
   outline: none; /* Убираем стандартный контур */
   box-sizing: border-box; /* Учет границ и отступов внутри размера */
-  resize: none; /* Отключаем изменение размера для textarea */
+  resize: none; 
 }
 
 
 
-/* Ограничиваем высоту textarea */
 textarea {
   min-height: 100px; 
   max-height: 200px; 
   overflow-y: auto; 
 }
 
-/* Убираем увеличение на мобильных устройствах при вводе */
+
 input[type="text"],
 textarea {
-  -webkit-appearance: none; 
+  appearance: none;
+-webkit-appearance: none;
+
   -webkit-text-size-adjust: 100%; 
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
