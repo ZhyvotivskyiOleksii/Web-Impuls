@@ -327,3 +327,9 @@ body.dark-mode .privacy-item {
 body.dark-mode .privacy-item h2 {
   color: #ffffff;
 }
+body.dark-mode .pricing-items {
+  background: #020202;
+}
+body.dark-mode .items-numbers {
+  color: #228ff8;
+}
