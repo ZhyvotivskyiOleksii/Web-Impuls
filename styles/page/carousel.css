@@ -1,9 +1,12 @@
 :root {
   --carousel-radius-desktop: 600px;
-  --carousel-radius-mobile: 320px; /* радиус побольше на мобильном */
+  --carousel-radius-mobile: 320px;
   --carousel-radius: var(--carousel-radius-desktop);
 }
 
+/* ======================================
+   ОСНОВНИЙ КОНТЕЙНЕР КАРУСЕЛІ
+   ====================================== */
 #myCarouselSection {
   padding-top: 60px;
   padding-bottom: 160px;
@@ -20,13 +23,17 @@
   letter-spacing: 2px;
 }
 
+/* 3D-карусель */
 .my-carousel-3d {
   perspective: 2000px;
   position: relative;
   margin: 0 auto;
-  height: 400px; /* высота для десктопа */
+  height: 400px; /* висота для десктопа */
 }
 
+/* ======================================
+   МЕДІА: до 768px (мобілки / невеликі планшети)
+   ====================================== */
 @media (max-width: 768px) {
   .my-carousel-3d {
     height: 350px;
@@ -34,9 +41,11 @@
   .my-carousel-container h2 {
     margin-bottom: 20px;
   }
- 
 }
 
+/* ======================================
+   ВНУТРІШНІЙ ТРЕК КАРУСЕЛІ
+   ====================================== */
 .my-carousel-items {
   width: 100%;
   height: 100%;
@@ -45,6 +54,9 @@
   transition: transform 1s ease;
 }
 
+/* ======================================
+   ОКРЕМІ ЕЛЕМЕНТИ КАРУСЕЛІ
+   ====================================== */
 .my-carousel-item {
   position: absolute;
   width: 260px;
@@ -63,11 +75,13 @@
   overflow: hidden;
 }
 
+/* Коли елемент "active" (спереду), збільшуємо opacity */
 .my-carousel-item.active {
   opacity: 1;
   transform: translateZ(var(--carousel-radius));
 }
 
+/* Картинка в межах блоку */
 .my-carousel-item img {
   width: 100%;
   height: 80%;
@@ -75,6 +89,7 @@
   display: block;
 }
 
+/* Текстова плашка поверх картинки */
 .my-item-overlay {
   position: absolute;
   bottom: 0;
@@ -96,6 +111,9 @@
   font-size: 14px;
 }
 
+/* ======================================
+   КНОПКИ "ВПЕРЕД" / "НАЗАД"
+   ====================================== */
 .my-carousel-nav-container {
   position: absolute;
   bottom: -150px;
@@ -124,6 +142,9 @@
   background: #002c55;
 }
 
+/* ======================================
+   МЕДІА: до 768px (мобілки / невеликі планшети)
+   ====================================== */
 @media (max-width: 768px) {
   .my-carousel-item {
     width: 180px;
@@ -139,6 +160,23 @@
   }
 }
 
+/* ======================================
+   МЕДІА: до 480px (ще менші екрани)
+   ====================================== */
+@media (max-width: 480px) {
+  .my-carousel-3d {
+    height: 320px; 
+  }
+  .my-carousel-item {
+    width: 160px; 
+    height: 240px; 
+    margin: -120px 0 0 -80px; 
+  }
+}
+
+/* ======================================
+   МОДАЛЬНЕ ВІКНО
+   ====================================== */
 .my-modal {
   display: none;
   opacity: 0;
@@ -173,6 +211,13 @@
   scrollbar-color: rgba(128,128,128,0.6) rgba(128,128,128,0.3);
 }
 
+/* якщо треба, щоб на планшеті/десктопі ширина була інша */
+@media (max-width: 1024px) {
+  .my-modal-content {
+    width: 95%;
+  }
+}
+
 .my-modal-content::-webkit-scrollbar {
   width: 8px;
 }
@@ -187,6 +232,7 @@
   border-radius: 4px;
 }
 
+/* Кнопка закриття модалки */
 .my-modal-close {
   position: absolute;
   top: 10px;
@@ -202,6 +248,9 @@
   color: #fff;
 }
 
+/* ======================================
+   ВНУТРІШНІ СТИЛІ ДЛЯ КОНТЕНТУ В МОДАЛЦІ
+   ====================================== */
 .site-about > h1 {
   padding-bottom: 20px;
   font-size: 34px;
@@ -239,7 +288,7 @@
 
 .portfolio-icon {
   flex: 1;
-  max-width: 600px;
+  max-width: 500px;
   height: auto;
   margin: 0 auto;
 }
@@ -283,17 +332,6 @@
 }
 
 @media (max-width: 480px) {
-  .my-carousel-3d {
-    height: 320px; 
-  }
-  .my-carousel-item {
-    width: 160px; 
-    height: 240px; 
-    margin: -120px 0 0 -80px; 
-  }
-  .my-modal-content {
-    width: 90%;
-  }
   .modal-project-top {
     flex-direction: column;
     align-items: center;

@@ -18,10 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function updateCarouselRadius() {
-    document.documentElement.style.setProperty(
-      "--carousel-radius",
-      getCarouselRadius()
-    );
+    document.documentElement.style.setProperty("--carousel-radius", getCarouselRadius());
   }
   updateCarouselRadius();
 
@@ -32,8 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const radius = getCarouselRadius();
     myCarouselItems.forEach((item, index) => {
       const angle = index * angleIncrement;
-      item.style.transform =
-        "rotateY(" + angle + "deg) translateZ(" + radius + ")";
+      item.style.transform = "rotateY(" + angle + "deg) translateZ(" + radius + ")";
     });
     updateCarousel();
   }
@@ -45,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const carouselTrack = document.querySelector(".my-carousel-items");
     carouselTrack.style.transform = "rotateY(" + -rotationAngle + "deg)";
 
-    // Визначити активний елемент (щоб підсвітити, якщо потрібно)
+    // Знайти активний елемент
     let activeIndex = Math.round(rotationAngle / angleIncrement) % totalItems;
     if (activeIndex < 0) activeIndex += totalItems;
 
@@ -54,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Ініціалізація позицій елементів
   positionCarouselItems();
 
   // ----------------------------
@@ -74,51 +71,63 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ----------------------------
-  // SWIPE / DRAG (POINTER EVENTS)
+  // SWIPE / DRAG (POINTER + TOUCH EVENTS) + "Клік" для модалки
   // ----------------------------
   const carouselTrack = document.querySelector(".my-carousel-items");
   let isPointerDown = false;
   let startX = 0;
+  let moved = false;       // Чи було перетягування/свайп
+  let pressedItem = null;  // Елемент, по якому клікнули
 
-  carouselTrack.addEventListener("pointerdown", (e) => {
+  function handleStart(e) {
     isPointerDown = true;
-    startX = e.clientX;
-    // Щоб під час свайпу не виділявся текст:
-    carouselTrack.setPointerCapture(e.pointerId);
-  });
+    startX = e.touches ? e.touches[0].clientX : e.clientX;
+    moved = false;
+    pressedItem = e.target.closest(".my-carousel-item") || null;
+    // Якщо pointer event – встановлюємо захоплення
+    if (e.type === "pointerdown") {
+      carouselTrack.setPointerCapture(e.pointerId);
+    }
+  }
 
-  carouselTrack.addEventListener("pointermove", (e) => {
+  function handleMove(e) {
     if (!isPointerDown) return;
-    const currentX = e.clientX;
+    let currentX = e.touches ? e.touches[0].clientX : e.clientX;
     const deltaX = currentX - startX;
-
-    // Чутливість свайпу/перетягування (0.5 можете змінити)
-    rotationAngle -= deltaX * 0.5;
+    if (Math.abs(deltaX) > 5) {
+      moved = true;
+    }
+    rotationAngle -= deltaX * 0.5; // 0.5 – коефіцієнт чутливості
     updateCarousel();
-
-    // Оновлюємо початкову позицію, щоб рух тривав плавно
     startX = currentX;
-  });
+    // Якщо це touch event, забороняємо стандартний прокрут
+    if (e.touches) e.preventDefault();
+  }
 
-  carouselTrack.addEventListener("pointerup", () => {
+  function handleEnd(e) {
     isPointerDown = false;
     snapToNearest();
-  });
-
-  // Якщо курсор чи палець "залишає" межі каруселі
-  carouselTrack.addEventListener("pointerleave", () => {
-    if (isPointerDown) {
-      isPointerDown = false;
-      snapToNearest();
+    if (!moved && pressedItem) {
+      openProjectModal(pressedItem);
     }
-  });
+  }
 
-  // Функція "магніту" до найближчого елемента
   function snapToNearest() {
     let nearest = Math.round(rotationAngle / angleIncrement) * angleIncrement;
     rotationAngle = nearest;
     updateCarousel();
   }
+
+  // Прикріплюємо pointer events
+  carouselTrack.addEventListener("pointerdown", handleStart);
+  carouselTrack.addEventListener("pointermove", handleMove);
+  carouselTrack.addEventListener("pointerup", handleEnd);
+  carouselTrack.addEventListener("pointerleave", handleEnd);
+
+  // Прикріплюємо touch events для пристроїв, що їх підтримують
+  carouselTrack.addEventListener("touchstart", handleStart, { passive: false });
+  carouselTrack.addEventListener("touchmove", handleMove, { passive: false });
+  carouselTrack.addEventListener("touchend", handleEnd);
 
   // ----------------------------
   // МОДАЛЬНЕ ВІКНО
@@ -143,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   myModal.addEventListener("click", (e) => {
-    // Закрити, якщо клікаємо поза контентом
     if (e.target === myModal) {
       closeModal();
     }
@@ -154,277 +162,275 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ----------------------------
-  // НАТИСКАННЯ НА ЕЛЕМЕНТ КАРУСЕЛІ => ВІДКРИТТЯ МОДАЛКИ
+  // ВІДКРИВАТИ МОДАЛКУ ДЛЯ КОНКРЕТНОГО ЕЛЕМЕНТА
   // ----------------------------
-  myCarouselItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      const projectId = item.getAttribute("data-project");
-      let content = "";
+  function openProjectModal(item) {
+    const projectId = item.getAttribute("data-project");
+    let content = "";
 
-      switch (projectId) {
-        case "1":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>Design Business Unity </h1>
-                  <p>Design Business Unity — об’єднання українського бізнесу...</p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+    switch (projectId) {
+      case "1":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Design Business Unity</h1>
+                <p>Design Business Unity — об’єднання українського бізнесу...</p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JS">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup1.svg" alt="Ol Servis">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/Desktop_DBU.png" alt="Image 1">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup1.svg" alt="Ol Servis">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desktop_DBU.png" alt="Image 1">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "2":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>Norway</h1>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "2":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Norway</h1>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup2.svg" alt="Admin Dashboard">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/Desktop_Norway.png" alt="Dashboard Screenshot">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup2.svg" alt="Admin Dashboard">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desktop_Norway.png" alt="Dashboard Screenshot">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "3":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>Beauty Salon</h1>
-                  <p>Салон красоты для настоящих ценителей ухода и стиля.</p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "3":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Beauty Salon</h1>
+                <p>Салон красоты для настоящих ценителей ухода и стиля.</p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup3.svg" alt="Beauty Salon">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/Beauty-Salon.png" alt="Beauty Salon">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup3.svg" alt="Beauty Salon">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Beauty-Salon.png" alt="Beauty Salon">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "4":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>ELITE AUTO</h1>
-                  <p>Выберите свою мечту прямо сейчас!</p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "4":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>ELITE AUTO</h1>
+                <p>Выберите свою мечту прямо сейчас!</p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup4.svg" alt="ELITE AUTO">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/Desktop_Car.png" alt="ELITE AUTO">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup4.svg" alt="ELITE AUTO">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desktop_Car.png" alt="ELITE AUTO">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "5":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>CRYPTO-VISTA</h1>
-                  <p>Trade, Invest, and Earn – All in One Crypto Ecosystem!</p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "5":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>CRYPTO-VISTA</h1>
+                <p>Trade, Invest, and Earn – All in One Crypto Ecosystem!</p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup5.png" alt="CRYPTO-VISTA">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/Desktop_Crypto.png" alt="CRYPTO-VISTA">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup5.png" alt="CRYPTO-VISTA">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desktop_Crypto.png" alt="CRYPTO-VISTA">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "6":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>EduFlow</h1>
-                  <p>Rozpocznij swoją podróż edukacyjną online.</p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "6":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>EduFlow</h1>
+                <p>Rozpocznij swoją podróż edukacyjną онлайн.</p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup6.png" alt="EduFlow">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/Desktop_Learn.png" alt="EduFlow">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup6.png" alt="EduFlow">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desktop_Learn.png" alt="EduFlow">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "7":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>Barber</h1>
-                  <p>Where Grooming Meets Style - Your Path to Timeless Elegance!</p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "7":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Barber</h1>
+                <p>Where Grooming Meets Style - Your Path to Timeless Elegance!</p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup7.png" alt="EduFlow">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/1440.png" alt="Barber">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup7.png" alt="Barber">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/1440.png" alt="Barber">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "8":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>India Cafe</h1>
-                  <p>The spot for authentic cuisine and great customer service.</p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "8":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>India Cafe</h1>
+                <p>The spot for authentic cuisine and great customer service.</p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup8.png" alt="India Cafe">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/Desctop_MainPage.png" alt="India Cafe">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup8.png" alt="India Cafe">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/Desctop_MainPage.png" alt="India Cafe">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "9":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>Barber</h1>
-                  <p>Ми зробимо так, щоб ви завжди виглядали гарно та стильно!</p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "9":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Barber</h1>
+                <p>Ми зробимо так, щоб ви завжди виглядали гарно та стильно!</p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/Mockup9.png" alt="Barber">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/desctop-2variant.png" alt="Barber">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/Mockup9.png" alt="Barber">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/desctop-2variant.png" alt="Barber">
                 </div>
               </div>
             </div>
-          `;
-          break;
+          </div>
+        `;
+        break;
 
-        case "10":
-          content = `
-            <div class="modal-project">
-              <div class="modal-project-top">
-                <div class="site-about">
-                  <h1>Admin Panel</h1>
-                  <p></p>
-                  <div class="teh-portfolio">
-                    <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
-                    <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
-                    <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
-                  </div>
+      case "10":
+        content = `
+          <div class="modal-project">
+            <div class="modal-project-top">
+              <div class="site-about">
+                <h1>Admin Panel</h1>
+                <p></p>
+                <div class="teh-portfolio">
+                  <img class="portfolio-teh-icon" src="/images/services/html_5.svg" alt="HTML">
+                  <img class="portfolio-teh-icon" src="/images/services/css_3.svg" alt="CSS">
+                  <img class="portfolio-teh-icon" src="/images/services/js.svg" alt="JavaScript">
                 </div>
-                <img class="portfolio-icon" src="./images/portfolio/dashbord.webp" alt="admin">
               </div>
-              <div class="modal-project-bottom">
-                <div class="modal-project-images">
-                  <div class="modal-image-block">
-                    <img src="./images/portfolio/dashb.png" alt="admin">
-                  </div>
+              <img class="portfolio-icon" src="./images/portfolio/dashbord.webp" alt="admin">
+            </div>
+            <div class="modal-project-bottom">
+              <div class="modal-project-images">
+                <div class="modal-image-block">
+                  <img src="./images/portfolio/dashb.png" alt="admin">
                 </div>
               </div>
             </div>
-          `;
-          break;
-      }
+          </div>
+        `;
+        break;
+    }
 
-      openModal(content);
-    });
-  });
+    openModal(content);
+  }
 
   // ----------------------------
   // ОНОВЛЕННЯ ПРИ РЕСАЙЗІ
